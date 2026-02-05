@@ -2,67 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Chapters - Echoes of Nyx</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Echoes of Nyx - English Chapters</title>
+    <style>
+        body { background: #0a0a0a; color: #00ff00; font-family: 'Courier New', monospace; max-width: 800px; margin: 0 auto; padding: 20px; }
+        a { color: #00ff00; border-bottom: 1px dashed #00ff00; text-decoration: none; }
+        a:hover { background: #00ff00; color: #000; }
+        h1 { border-bottom: 2px solid #00ff00; text-transform: uppercase; letter-spacing: 2px; }
+        .chapter-list { list-style: none; padding: 0; }
+        .chapter-list li { margin: 8px 0; padding: 8px; border: 1px solid #004400; }
+        .chapter-list li:hover { border-color: #00ff00; }
+        .nav { margin: 20px 0; }
+        .matrix-rain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; opacity: 0.05; }
+    </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <a href="index.html" class="nav-logo">_ECHOES_OF_NYX_</a>
-        <div class="nav-links">
-            <a href="index.html">[ HOME ]</a>
-            <a href="blog-en.html" class="active">[ ENGLISH ]</a>
-            <a href="blog-it.html">[ ITALIANO ]</a>
-        </div>
-    </nav>
-
-    <main class="container">
-        <header class="page-header">
-            <h1>> English_Chapters</h1>
-            <p style="color: var(--text-dim);">> select_file_to_read.sh</p>
-        </header>
-
-        <div class="progress-display" style="margin-bottom: 2rem;">
-            <div class="label">> PROGRESS:</div>
-            <div class="value">005/080 Chapters</div>
-        </div>
-
-        <section class="file-listing">
-            <div class="file-entry">
-                <span class="file-name">000/ prologue_signal.txt [EN]</span>
-                <a href="#" class="file-action">[READ]</a>
-            </div>
-            <div class="file-entry">
-                <span class="file-name">001/ dr_elena_voss.txt [EN]</span>
-                <a href="chapter-en-001.html" class="file-action">[READ]</a>
-            </div>
-            <div class="file-entry">
-                <span class="file-name">002/ first_translation.txt [EN]</span>
-                <a href="chapter-en-002.html" class="file-action">[READ]</a>
-            </div>
-            <div class="file-entry">
-                <span class="file-name">003/ colony_omega_7.txt [EN]</span>
-                <a href="chapter-en-003.html" class="file-action">[READ]</a>
-            </div>
-            <div class="file-entry">
-                <span class="file-name">004/ shadows_in_light.txt [EN]</span>
-                <a href="chapter-en-004.html" class="file-action">[READ]</a>
-            </div>
-            <div class="file-entry">
-                <span class="file-name">005/ truth_beneath.txt [EN]</span>
-                <a href="chapter-en-005.html" class="file-action">[READ]</a>
-            </div>
-        </section>
-
-        <nav class="pagination">
-            <span class="prev disabled">← PREV</span>
-            <span class="page-numbers">PAGE 1/1</span>
-            <span class="next disabled">NEXT →</span>
-        </nav>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Echoes of Nyx. All rights reserved.</p>
-    </footer>
+    <div class="matrix-rain"><canvas id="matrix"></canvas></div>
+    <nav class="nav"><a href="index.html">&larr; Home</a> | <a href="blog-en.html">English</a> | <a href="blog-it.html">Italiano</a></nav>
+    <h1>Echoes of Nyx - English Chapters</h1>
+    <ul class="chapter-list">
+        <li><a href="chapter-en-001.html">Chapter 001</a></li>
+        <li><a href="chapter-en-002.html">Chapter 002</a></li>
+        <li><a href="chapter-en-003.html">Chapter 003</a></li>
+        <li><a href="chapter-en-004.html">Chapter 004</a></li>
+        <li><a href="chapter-en-005.html">Chapter 005</a></li>
+        <li><a href="chapter-en-006.html">Chapter 006</a></li>
+        <li><a href="chapter-en-007.html">Chapter 007</a></li>
+        <li><a href="chapter-en-008.html">Chapter 008</a></li>
+        <li><a href="chapter-en-009.html">Chapter 009</a></li>
+        <li><a href="chapter-en-010.html">Chapter 010</a></li>
+        <li><a href="chapter-en-011.html">Chapter 011</a></li>
+        <li><a href="chapter-en-012.html">Chapter 012</a></li>
+        <li><a href="chapter-en-013.html">Chapter 013</a></li>
+        <li><a href="chapter-en-014.html">Chapter 014</a></li>
+        <li><a href="chapter-en-015.html">Chapter 015</a></li>
+        <li><a href="chapter-en-016.html">Chapter 016</a></li>
+        <li><a href="chapter-en-017.html">Chapter 017</a></li>
+        <li><a href="chapter-en-018.html">Chapter 018</a></li>
+        <li><a href="chapter-en-019.html">Chapter 019</a></li>
+        <li><a href="chapter-en-020.html">Chapter 020</a></li>
+        <li><a href="chapter-en-021.html">Chapter 021</a></li>
+        <li><a href="chapter-en-022.html">Chapter 022</a></li>
+        <li><a href="chapter-en-023.html">Chapter 023</a></li>
+        <li><a href="chapter-en-024.html">Chapter 024</a></li>
+        <li><a href="chapter-en-025.html">Chapter 025</a></li>
+        <li><a href="chapter-en-026.html">Chapter 026</a></li>
+        <li><a href="chapter-en-027.html">Chapter 027</a></li>
+        <li><a href="chapter-en-028.html">Chapter 028</a></li>
+        <li><a href="chapter-en-029.html">Chapter 029</a></li>
+        <li><a href="chapter-en-030.html">Chapter 030</a></li>
+        <li><a href="chapter-en-031.html">Chapter 031</a></li>
+        <li><a href="chapter-en-032.html">Chapter 032</a></li>
+        <li><a href="chapter-en-033.html">Chapter 033</a></li>
+        <li><a href="chapter-en-034.html">Chapter 034</a></li>
+        <li><a href="chapter-en-035.html">Chapter 035</a></li>
+        <li><a href="chapter-en-036.html">Chapter 036</a></li>
+        <li><a href="chapter-en-037.html">Chapter 037</a></li>
+        <li><a href="chapter-en-038.html">Chapter 038</a></li>
+        <li><a href="chapter-en-039.html">Chapter 039</a></li>
+        <li><a href="chapter-en-040.html">Chapter 040</a></li>
+        <li><a href="chapter-en-041.html">Chapter 041</a></li>
+        <li><a href="chapter-en-042.html">Chapter 042</a></li>
+        <li><a href="chapter-en-043.html">Chapter 043</a></li>
+        <li><a href="chapter-en-044.html">Chapter 044</a></li>
+        <li><a href="chapter-en-045.html">Chapter 045</a></li>
+        <li><a href="chapter-en-046.html">Chapter 046</a></li>
+        <li><a href="chapter-en-047.html">Chapter 047</a></li>
+        <li><a href="chapter-en-048.html">Chapter 048</a></li>
+        <li><a href="chapter-en-049.html">Chapter 049</a></li>
+        <li><a href="chapter-en-050.html">Chapter 050</a></li>
+        <li><a href="chapter-en-051.html">Chapter 051</a></li>
+        <li><a href="chapter-en-052.html">Chapter 052</a></li>
+        <li><a href="chapter-en-053.html">Chapter 053</a></li>
+        <li><a href="chapter-en-054.html">Chapter 054</a></li>
+        <li><a href="chapter-en-055.html">Chapter 055</a></li>
+        <li><a href="chapter-en-056.html">Chapter 056</a></li>
+        <li><a href="chapter-en-057.html">Chapter 057</a></li>
+        <li><a href="chapter-en-058.html">Chapter 058</a></li>
+        <li><a href="chapter-en-059.html">Chapter 059</a></li>
+        <li><a href="chapter-en-060.html">Chapter 060</a></li>
+        <li><a href="chapter-en-061.html">Chapter 061</a></li>
+        <li><a href="chapter-en-062.html">Chapter 062</a></li>
+        <li><a href="chapter-en-063.html">Chapter 063</a></li>
+        <li><a href="chapter-en-064.html">Chapter 064</a></li>
+    </ul>
+    <nav class="nav"><a href="index.html">&larr; Home</a></nav>
+    <script>
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*';
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#00ff00';
+            ctx.font = fontSize + 'px monospace';
+            for(let i = 0; i < drops.length; i++) {
+                ctx.fillText(chars[Math.floor(Math.random() * chars.length)], i * fontSize, drops[i] * fontSize);
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                drops[i]++;
+            }
+        }
+        setInterval(draw, 50);
+    </script>
 </body>
 </html>

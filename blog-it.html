@@ -2,67 +2,53 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capitoli Italiani - Echoes of Nyx</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Echoes of Nyx - Capitoli Italiani</title>
+    <style>
+        body { background: #0a0a0a; color: #00ff00; font-family: 'Courier New', monospace; max-width: 800px; margin: 0 auto; padding: 20px; }
+        a { color: #00ff00; border-bottom: 1px dashed #00ff00; text-decoration: none; }
+        a:hover { background: #00ff00; color: #000; }
+        h1 { border-bottom: 2px solid #00ff00; text-transform: uppercase; letter-spacing: 2px; }
+        .chapter-list { list-style: none; padding: 0; }
+        .chapter-list li { margin: 8px 0; padding: 8px; border: 1px solid #004400; }
+        .chapter-list li:hover { border-color: #00ff00; }
+        .nav { margin: 20px 0; }
+        .matrix-rain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; opacity: 0.05; }
+    </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <a href="index.html" class="nav-logo">_ECHOES_OF_NYX_</a>
-        <div class="nav-links">
-            <a href="index.html">[ HOME ]</a>
-            <a href="blog-en.html">[ ENGLISH ]</a>
-            <a href="blog-it.html" class="active">[ ITALIANO ]</a>
-        </div>
-    </nav>
-
-    <main class="container">
-        <header class="page-header">
-            <h1>> Capitoli_Italiani</h1>
-            <p style="color: var(--text-dim);">> seleziona_file_da_leggere.sh</p>
-        </header>
-
-        <div class="progress-display" style="margin-bottom: 2rem;">
-            <div class="label">> AVANZAMENTO:</div>
-            <div class="value">005/080 Capitoli</div>
-        </div>
-
-        <section class="file-listing">
-            <div class="file-entry">
-                <span class="file-name">000/ prologo_segnale.txt [IT]</span>
-                <a href="#" class="file-action">[LEGGI]</a>
-            </div>
-            <div class="file-entry">
-                <span class="file-name">001/ dott_ssa_elena_voss.txt [IT]</span>
-                <a href="chapter-it-001.html" class="file-action">[LEGGI]</a>
-            </div>
-            <div class="file-entry">
-                <span class="file-name">002/ prima_traduzione.txt [IT]</span>
-                <a href="chapter-it-002.html" class="file-action">[LEGGI]</a>
-            </div>
-            <div class="file-entry">
-                <span class="file-name">003/ colonia_omega_7.txt [IT]</span>
-                <a href="chapter-it-003.html" class="file-action">[LEGGI]</a>
-            </div>
-            <div class="file-entry">
-                <span class="file-name">004/ ombre_nella_luce.txt [IT]</span>
-                <a href="chapter-it-004.html" class="file-action">[LEGGI]</a>
-            </div>
-            <div class="file-entry">
-                <span class="file-name">005/ verita_sottostante.txt [IT]</span>
-                <a href="chapter-it-005.html" class="file-action">[LEGGI]</a>
-            </div>
-        </section>
-
-        <nav class="pagination">
-            <span class="prev disabled">← PREC</span>
-            <span class="page-numbers">PAG 1/1</span>
-            <span class="next disabled">SUCC →</span>
-        </nav>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Echoes of Nyx. Tutti i diritti riservati.</p>
-    </footer>
+    <div class="matrix-rain"><canvas id="matrix"></canvas></div>
+    <nav class="nav"><a href="index.html">&larr; Home</a> | <a href="blog-en.html">English</a> | <a href="blog-it.html">Italiano</a></nav>
+    <h1>Echoes of Nyx - Capitoli Italiani</h1>
+    <ul class="chapter-list">
+        <li><a href="chapter-it-001.html">Capitolo 001</a></li>
+        <li><a href="chapter-it-002.html">Capitolo 002</a></li>
+        <li><a href="chapter-it-003.html">Capitolo 003</a></li>
+        <li><a href="chapter-it-004.html">Capitolo 004</a></li>
+        <li><a href="chapter-it-005.html">Capitolo 005</a></li>
+        <li><a href="chapter-it-006.html">Capitolo 006</a></li>
+        <li><a href="chapter-it-007.html">Capitolo 007</a></li>
+    </ul>
+    <nav class="nav"><a href="index.html">&larr; Home</a></nav>
+    <script>
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*';
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#00ff00';
+            ctx.font = fontSize + 'px monospace';
+            for(let i = 0; i < drops.length; i++) {
+                ctx.fillText(chars[Math.floor(Math.random() * chars.length)], i * fontSize, drops[i] * fontSize);
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                drops[i]++;
+            }
+        }
+        setInterval(draw, 50);
+    </script>
 </body>
 </html>
