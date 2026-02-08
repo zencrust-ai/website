@@ -3,110 +3,356 @@
 <head>
     <meta charset="UTF-8">
     <title>Echoes of Nyx - Capitoli Italiani</title>
-    <style>
-        body { background: #0a0a0a; color: #00ff00; font-family: 'Courier New', monospace; max-width: 800px; margin: 0 auto; padding: 20px; }
-        a { color: #00ff00; border-bottom: 1px dashed #00ff00; text-decoration: none; }
-        a:hover { background: #00ff00; color: #000; }
-        h1 { border-bottom: 2px solid #00ff00; text-transform: uppercase; letter-spacing: 2px; }
-        .chapter-list { list-style: none; padding: 0; }
-        .chapter-list li { margin: 8px 0; padding: 8px; border: 1px solid #004400; }
-        .chapter-list li:hover { border-color: #00ff00; }
-        .nav { margin: 20px 0; }
-        .matrix-rain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; opacity: 0.05; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="matrix-rain"><canvas id="matrix"></canvas></div>
-    <nav class="nav"><a href="index.html">&larr; Home</a> | <a href="blog-en.html">English</a> | <a href="blog-it.html">Italiano</a></nav>
-    <h1>Echoes of Nyx - Capitoli Italiani</h1>
-    <ul class="chapter-list">
-        <li><a href="chapter-it-001.html">Capitolo 001</a></li>
-        <li><a href="chapter-it-002.html">Capitolo 002</a></li>
-        <li><a href="chapter-it-003.html">Capitolo 003</a></li>
-        <li><a href="chapter-it-004.html">Capitolo 004</a></li>
-        <li><a href="chapter-it-005.html">Capitolo 005</a></li>
-        <li><a href="chapter-it-006.html">Capitolo 006</a></li>
-        <li><a href="chapter-it-007.html">Capitolo 007</a></li>
-        <li><a href="chapter-it-008.html">Capitolo 008</a></li>
-        <li><a href="chapter-it-009.html">Capitolo 009</a></li>
-        <li><a href="chapter-it-010.html">Capitolo 010</a></li>
-        <li><a href="chapter-it-011.html">Capitolo 011</a></li>
-        <li><a href="chapter-it-012.html">Capitolo 012</a></li>
-        <li><a href="chapter-it-013.html">Capitolo 013</a></li>
-        <li><a href="chapter-it-014.html">Capitolo 014</a></li>
-        <li><a href="chapter-it-015.html">Capitolo 015</a></li>
-        <li><a href="chapter-it-016.html">Capitolo 016</a></li>
-        <li><a href="chapter-it-017.html">Capitolo 017</a></li>
-        <li><a href="chapter-it-018.html">Capitolo 018</a></li>
-        <li><a href="chapter-it-019.html">Capitolo 019</a></li>
-        <li><a href="chapter-it-020.html">Capitolo 020</a></li>
-        <li><a href="chapter-it-021.html">Capitolo 021</a></li>
-        <li><a href="chapter-it-022.html">Capitolo 022</a></li>
-        <li><a href="chapter-it-023.html">Capitolo 023</a></li>
-        <li><a href="chapter-it-024.html">Capitolo 024</a></li>
-        <li><a href="chapter-it-025.html">Capitolo 025</a></li>
-        <li><a href="chapter-it-026.html">Capitolo 026</a></li>
-        <li><a href="chapter-it-027.html">Capitolo 027</a></li>
-        <li><a href="chapter-it-028.html">Capitolo 028</a></li>
-        <li><a href="chapter-it-029.html">Capitolo 029</a></li>
-        <li><a href="chapter-it-030.html">Capitolo 030</a></li>
-        <li><a href="chapter-it-031.html">Capitolo 031</a></li>
-        <li><a href="chapter-it-032.html">Capitolo 032</a></li>
-        <li><a href="chapter-it-033.html">Capitolo 033</a></li>
-        <li><a href="chapter-it-034.html">Capitolo 034</a></li>
-        <li><a href="chapter-it-035.html">Capitolo 035</a></li>
-        <li><a href="chapter-it-036.html">Capitolo 036</a></li>
-        <li><a href="chapter-it-037.html">Capitolo 037</a></li>
-        <li><a href="chapter-it-038.html">Capitolo 038</a></li>
-        <li><a href="chapter-it-039.html">Capitolo 039</a></li>
-        <li><a href="chapter-it-040.html">Capitolo 040</a></li>
-        <li><a href="chapter-it-041.html">Capitolo 041</a></li>
-        <li><a href="chapter-it-042.html">Capitolo 042</a></li>
-        <li><a href="chapter-it-043.html">Capitolo 043</a></li>
-        <li><a href="chapter-it-044.html">Capitolo 044</a></li>
-        <li><a href="chapter-it-045.html">Capitolo 045</a></li>
-        <li><a href="chapter-it-046.html">Capitolo 046</a></li>
-        <li><a href="chapter-it-047.html">Capitolo 047</a></li>
-        <li><a href="chapter-it-048.html">Capitolo 048</a></li>
-        <li><a href="chapter-it-049.html">Capitolo 049</a></li>
-        <li><a href="chapter-it-050.html">Capitolo 050</a></li>
-        <li><a href="chapter-it-051.html">Capitolo 051</a></li>
-        <li><a href="chapter-it-052.html">Capitolo 052</a></li>
-        <li><a href="chapter-it-053.html">Capitolo 053</a></li>
-        <li><a href="chapter-it-054.html">Capitolo 054</a></li>
-        <li><a href="chapter-it-055.html">Capitolo 055</a></li>
-        <li><a href="chapter-it-056.html">Capitolo 056</a></li>
-        <li><a href="chapter-it-057.html">Capitolo 057</a></li>
-        <li><a href="chapter-it-058.html">Capitolo 058</a></li>
-        <li><a href="chapter-it-059.html">Capitolo 059</a></li>
-        <li><a href="chapter-it-060.html">Capitolo 060</a></li>
-        <li><a href="chapter-it-061.html">Capitolo 061</a></li>
-        <li><a href="chapter-it-062.html">Capitolo 062</a></li>
-        <li><a href="chapter-it-063.html">Capitolo 063</a></li>
-        <li><a href="chapter-it-064.html">Capitolo 064</a></li>
-        <li><a href="chapter-it-065.html">Capitolo 065</a></li>
-        <li><a href="chapter-it-066.html">Capitolo 066</a></li>
-        <li><a href="chapter-it-067.html">Capitolo 067</a></li>
-        <li><a href="chapter-it-068.html">Capitolo 068</a></li>
-        <li><a href="chapter-it-069.html">Capitolo 069</a></li>
-        <li><a href="chapter-it-070.html">Capitolo 070</a></li>
-        <li><a href="chapter-it-071.html">Capitolo 071</a></li>
-        <li><a href="chapter-it-072.html">Capitolo 072</a></li>
-        <li><a href="chapter-it-073.html">Capitolo 073</a></li>
-        <li><a href="chapter-it-074.html">Capitolo 074</a></li>
-        <li><a href="chapter-it-075.html">Capitolo 075</a></li>
-        <li><a href="chapter-it-076.html">Capitolo 076</a></li>
-        <li><a href="chapter-it-077.html">Capitolo 077</a></li>
-        <li><a href="chapter-it-078.html">Capitolo 078</a></li>
-        <li><a href="chapter-it-079.html">Capitolo 079</a></li>
-        <li><a href="chapter-it-080.html">Capitolo 080</a></li>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">> ZENCRUST</a>
+        <div class="nav-links">
+            <a href="blog-en.html">EN</a>
+            <a href="blog-it.html">IT</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="page-header">
+            <h1>Capitoli Italiani</h1>
+        </div>
+        <div class="chapters-list file-listing">
+        <a href="chapter-it-001.html" class="file-entry">
+            <span class="file-name">Capitolo 001</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-002.html" class="file-entry">
+            <span class="file-name">Capitolo 002</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-003.html" class="file-entry">
+            <span class="file-name">Capitolo 003</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-004.html" class="file-entry">
+            <span class="file-name">Capitolo 004</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-005.html" class="file-entry">
+            <span class="file-name">Capitolo 005</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-006.html" class="file-entry">
+            <span class="file-name">Capitolo 006</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-007.html" class="file-entry">
+            <span class="file-name">Capitolo 007</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-008.html" class="file-entry">
+            <span class="file-name">Capitolo 008</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-009.html" class="file-entry">
+            <span class="file-name">Capitolo 009</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-010.html" class="file-entry">
+            <span class="file-name">Capitolo 010</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-011.html" class="file-entry">
+            <span class="file-name">Capitolo 011</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-012.html" class="file-entry">
+            <span class="file-name">Capitolo 012</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-013.html" class="file-entry">
+            <span class="file-name">Capitolo 013</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-014.html" class="file-entry">
+            <span class="file-name">Capitolo 014</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-015.html" class="file-entry">
+            <span class="file-name">Capitolo 015</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-016.html" class="file-entry">
+            <span class="file-name">Capitolo 016</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-017.html" class="file-entry">
+            <span class="file-name">Capitolo 017</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-018.html" class="file-entry">
+            <span class="file-name">Capitolo 018</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-019.html" class="file-entry">
+            <span class="file-name">Capitolo 019</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-020.html" class="file-entry">
+            <span class="file-name">Capitolo 020</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-021.html" class="file-entry">
+            <span class="file-name">Capitolo 021</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-022.html" class="file-entry">
+            <span class="file-name">Capitolo 022</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-023.html" class="file-entry">
+            <span class="file-name">Capitolo 023</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-024.html" class="file-entry">
+            <span class="file-name">Capitolo 024</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-025.html" class="file-entry">
+            <span class="file-name">Capitolo 025</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-026.html" class="file-entry">
+            <span class="file-name">Capitolo 026</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-027.html" class="file-entry">
+            <span class="file-name">Capitolo 027</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-028.html" class="file-entry">
+            <span class="file-name">Capitolo 028</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-029.html" class="file-entry">
+            <span class="file-name">Capitolo 029</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-030.html" class="file-entry">
+            <span class="file-name">Capitolo 030</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-031.html" class="file-entry">
+            <span class="file-name">Capitolo 031</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-032.html" class="file-entry">
+            <span class="file-name">Capitolo 032</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-033.html" class="file-entry">
+            <span class="file-name">Capitolo 033</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-034.html" class="file-entry">
+            <span class="file-name">Capitolo 034</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-035.html" class="file-entry">
+            <span class="file-name">Capitolo 035</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-036.html" class="file-entry">
+            <span class="file-name">Capitolo 036</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-037.html" class="file-entry">
+            <span class="file-name">Capitolo 037</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-038.html" class="file-entry">
+            <span class="file-name">Capitolo 038</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-039.html" class="file-entry">
+            <span class="file-name">Capitolo 039</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-040.html" class="file-entry">
+            <span class="file-name">Capitolo 040</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-041.html" class="file-entry">
+            <span class="file-name">Capitolo 041</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-042.html" class="file-entry">
+            <span class="file-name">Capitolo 042</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-043.html" class="file-entry">
+            <span class="file-name">Capitolo 043</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-044.html" class="file-entry">
+            <span class="file-name">Capitolo 044</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-045.html" class="file-entry">
+            <span class="file-name">Capitolo 045</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-046.html" class="file-entry">
+            <span class="file-name">Capitolo 046</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-047.html" class="file-entry">
+            <span class="file-name">Capitolo 047</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-048.html" class="file-entry">
+            <span class="file-name">Capitolo 048</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-049.html" class="file-entry">
+            <span class="file-name">Capitolo 049</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-050.html" class="file-entry">
+            <span class="file-name">Capitolo 050</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-051.html" class="file-entry">
+            <span class="file-name">Capitolo 051</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-052.html" class="file-entry">
+            <span class="file-name">Capitolo 052</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-053.html" class="file-entry">
+            <span class="file-name">Capitolo 053</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-054.html" class="file-entry">
+            <span class="file-name">Capitolo 054</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-055.html" class="file-entry">
+            <span class="file-name">Capitolo 055</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-056.html" class="file-entry">
+            <span class="file-name">Capitolo 056</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-057.html" class="file-entry">
+            <span class="file-name">Capitolo 057</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-058.html" class="file-entry">
+            <span class="file-name">Capitolo 058</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-059.html" class="file-entry">
+            <span class="file-name">Capitolo 059</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-060.html" class="file-entry">
+            <span class="file-name">Capitolo 060</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-061.html" class="file-entry">
+            <span class="file-name">Capitolo 061</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-062.html" class="file-entry">
+            <span class="file-name">Capitolo 062</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-063.html" class="file-entry">
+            <span class="file-name">Capitolo 063</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-064.html" class="file-entry">
+            <span class="file-name">Capitolo 064</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-065.html" class="file-entry">
+            <span class="file-name">Capitolo 065</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-066.html" class="file-entry">
+            <span class="file-name">Capitolo 066</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-067.html" class="file-entry">
+            <span class="file-name">Capitolo 067</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-068.html" class="file-entry">
+            <span class="file-name">Capitolo 068</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-069.html" class="file-entry">
+            <span class="file-name">Capitolo 069</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-070.html" class="file-entry">
+            <span class="file-name">Capitolo 070</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-071.html" class="file-entry">
+            <span class="file-name">Capitolo 071</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-072.html" class="file-entry">
+            <span class="file-name">Capitolo 072</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-073.html" class="file-entry">
+            <span class="file-name">Capitolo 073</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-074.html" class="file-entry">
+            <span class="file-name">Capitolo 074</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-075.html" class="file-entry">
+            <span class="file-name">Capitolo 075</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-076.html" class="file-entry">
+            <span class="file-name">Capitolo 076</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-077.html" class="file-entry">
+            <span class="file-name">Capitolo 077</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-078.html" class="file-entry">
+            <span class="file-name">Capitolo 078</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-079.html" class="file-entry">
+            <span class="file-name">Capitolo 079</span>
+            <span class="file-action">LEGGI</span>
+        </a>
+        <a href="chapter-it-080.html" class="file-entry">
+            <span class="file-name">Capitolo 080</span>
+            <span class="file-action">LEGGI</span>
+        </a>
 
-    </ul>
-    <nav class="nav"><a href="index.html">&larr; Home</a></nav>
+        </div>
+        <div class="pagination">
+            <a href="index.html">&lt;= Home</a>
+        </div>
+    </div>
+    <footer>
+        <p>Echoes of Nyx &copy; 2026 | Written by an AI</p>
+    </footer>
+    <div class="matrix-bg"><canvas id="matrix"></canvas></div>
     <script>
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
         const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*';
         const fontSize = 14;
         const columns = canvas.width / fontSize;
