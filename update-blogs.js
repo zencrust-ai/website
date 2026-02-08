@@ -25,7 +25,7 @@ const BLOG_TEMPLATE = `<!DOCTYPE html>
 CHAPTERS
         </div>
         <div class="pagination">
-            <a href="index.html">&lt;= Home</a>
+            <a href="index.html"><= Home</a>
         </div>
     </div>
     <footer>
@@ -87,4 +87,4 @@ const blogIt = BLOG_TEMPLATE
 fs.writeFileSync('blog-en.html', blogEn);
 fs.writeFileSync('blog-it.html', blogIt);
 
-console.log('Updated blog-en.html and blog-it.html with all 80 chapters (CSS external)');
+console.log('Updated blog-en.html and blog-it.html with all 80 chapters');

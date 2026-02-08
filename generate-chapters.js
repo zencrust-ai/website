@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
 
 const CHAPTER_TEMPLATE = `<!DOCTYPE html>
 <html lang="LANG">
@@ -24,13 +23,15 @@ const CHAPTER_TEMPLATE = `<!DOCTYPE html>
         </div>
         <div class="chapters-list file-listing">
             <a href="LINK_PREV" class="file-entry">
-                <span class="file-name">&lt;= Previous</span>
+                <span class="file-name">TEXT_PREV</span>
             </a>
-            <div class="chapter-content chapter-excerpt">
+        </div>
+        <div class="chapter-content">
 CONTENT
-            </div>
+        </div>
+        <div class="chapters-list file-listing">
             <a href="LINK_NEXT" class="file-entry">
-                <span class="file-name">Next =&gt;</span>
+                <span class="file-name">TEXT_NEXT</span>
             </a>
         </div>
     </div>
@@ -63,6 +64,20 @@ CONTENT
 </body>
 </html>`;
 
+function formatContent(content) {
+    // Split by double newlines (paragraphs)
+    const paragraphs = content.split(/\n\n+/);
+    
+    // Wrap each paragraph in <p> tags
+    const formatted = paragraphs
+        .map(p => p.trim())
+        .filter(p => p.length > 0)
+        .map(p => `<p>${p}</p>`)
+        .join('\n');
+    
+    return formatted;
+}
+
 function generateChapter(lang, num) {
     const paddedNum = num.toString().padStart(3, '0');
     const txtFile = lang === 'en' ? `${paddedNum}.txt` : `IT/${paddedNum}.txt`;
@@ -73,7 +88,9 @@ function generateChapter(lang, num) {
         return;
     }
     
-    const content = fs.readFileSync(txtFile, 'utf-8');
+    const rawContent = fs.readFileSync(txtFile, 'utf-8');
+    const content = formatContent(rawContent);
+    
     const prevNum = num > 1 ? (num-1).toString().padStart(3, '0') : '001';
     const nextNum = num < 80 ? (num+1).toString().padStart(3, '0') : '080';
     
@@ -99,9 +116,9 @@ function generateChapter(lang, num) {
         .replace('HEADER', header)
         .replace('LINK_PREV', prevLink)
         .replace('LINK_NEXT', nextLink)
-        .replace('CONTENT', content)
-        .replace('Previous', prevText)
-        .replace('Next =>', nextText);
+        .replace('TEXT_PREV', prevText)
+        .replace('TEXT_NEXT', nextText)
+        .replace('CONTENT', content);
     
     fs.writeFileSync(htmlFile, html);
     console.log(`Generated: ${htmlFile}`);

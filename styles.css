@@ -552,7 +552,50 @@ footer::before {
     opacity: 0.05;
 }
 
-/* Responsive - Enhanced */
+/* Chapter Content - Better Formatting */
+.chapter-content {
+    text-align: justify;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+    font-size: 1rem;
+}
+
+.chapter-content p {
+    margin-bottom: 1.5rem;
+    text-indent: 2rem;
+}
+
+.chapter-content p:first-of-type {
+    text-indent: 0;
+}
+
+.chapter-content p:first-letter {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.chapter-content em,
+.chapter-content i {
+    color: var(--text-dim);
+    font-style: italic;
+}
+
+.chapter-content strong,
+.chapter-content b {
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+/* Extra spacing for readability */
+.chapter-content br + br {
+    display: block;
+    content: "";
+    margin-top: 0.5rem;
+}
+
+.chapter-content {
+    padding-bottom: 2rem;
+}
 @media (max-width: 1024px) {
     .container {
         max-width: 800px;
