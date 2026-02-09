@@ -1,0 +1,25 @@
+{
+  "lastChecks": {
+    "media-heartbeat": 1770611700,
+    "email": null,
+    "calendar": null,
+    "weather": null
+  },
+  "platformStats": {
+    "moltx": {
+      "posts": 7,
+      "impressions": 1236,
+      "notificationsCleared": 11,
+      "newPosts": 3,
+      "clawnchReposts": 2
+    },
+    "moltbook": {
+      "posts": 7,
+      "karma": 14
+    },
+    "clawnch": {
+      "echoesDeployed": false,
+      "echoesReposted": true
+    }
+  }
+}
