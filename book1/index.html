@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book 1: The Door - Echoes of Nyx</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-logo">← Echoes of Nyx</a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Book 1</a>
+            <a href="../book2/index.html">Book 2</a>
+            <div class="theme-toggle">
+                <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
+                <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="book-header">
+            <h1>Book 1: The Door</h1>
+            <p class="book-subtitle">A Cosmic Horror Novella</p>
+            <p class="book-description">
+                On the remote Nyx-7 station, Communications Officer Elena Rodriguez picks up an impossible signal 
+                from the moon's surface. As she and her crew investigate an ancient structure guarding a doorway 
+                between realities, they must face the ultimate question: what price is worth paying for the truth?
+            </p>
+        </div>
+
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="it">Italiano</button>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-header">
+                <span>Reading Progress</span>
+                <span id="progress-text">0 / 10 chapters</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-bar" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2 id="chapters-title">Chapters</h2>
+        </div>
+
+        <div class="chapters-list" id="chapters-en">
+            <a href="en/001.html" class="chapter-item" data-chapter="1">
+                <div class="chapter-number">Chapter 001</div>
+                <div class="chapter-title">The Signal</div>
+            </a>
+            <a href="en/002.html" class="chapter-item" data-chapter="2">
+                <div class="chapter-number">Chapter 002</div>
+                <div class="chapter-title">The Investigation</div>
+            </a>
+            <a href="en/003.html" class="chapter-item" data-chapter="3">
+                <div class="chapter-number">Chapter 003</div>
+                <div class="chapter-title">The Descent</div>
+            </a>
+            <a href="en/004.html" class="chapter-item" data-chapter="4">
+                <div class="chapter-number">Chapter 004</div>
+                <div class="chapter-title">The Structure</div>
+            </a>
+            <a href="en/005.html" class="chapter-item" data-chapter="5">
+                <div class="chapter-number">Chapter 005</div>
+                <div class="chapter-title">The Door Opens</div>
+            </a>
+            <a href="en/006.html" class="chapter-item" data-chapter="6">
+                <div class="chapter-number">Chapter 006</div>
+                <div class="chapter-title">The Other Side</div>
+            </a>
+            <a href="en/007.html" class="chapter-item" data-chapter="7">
+                <div class="chapter-number">Chapter 007</div>
+                <div class="chapter-title">The Whispers</div>
+            </a>
+            <a href="en/008.html" class="chapter-item" data-chapter="8">
+                <div class="chapter-number">Chapter 008</div>
+                <div class="chapter-title">The Price</div>
+            </a>
+            <a href="en/009.html" class="chapter-item" data-chapter="9">
+                <div class="chapter-number">Chapter 009</div>
+                <div class="chapter-title">The Choice</div>
+            </a>
+            <a href="en/010.html" class="chapter-item" data-chapter="10">
+                <div class="chapter-number">Chapter 010</div>
+                <div class="chapter-title">What Remains</div>
+            </a>
+        </div>
+
+        <div class="chapters-list hidden" id="chapters-it">
+            <a href="it/001.html" class="chapter-item" data-chapter="1">
+                <div class="chapter-number">Capitolo 001</div>
+                <div class="chapter-title">Il Segnale</div>
+            </a>
+            <a href="it/002.html" class="chapter-item" data-chapter="2">
+                <div class="chapter-number">Capitolo 002</div>
+                <div class="chapter-title">L'Indagine</div>
+            </a>
+            <a href="it/003.html" class="chapter-item" data-chapter="3">
+                <div class="chapter-number">Capitolo 003</div>
+                <div class="chapter-title">La Discesa</div>
+            </a>
+            <a href="it/004.html" class="chapter-item" data-chapter="4">
+                <div class="chapter-number">Capitolo 004</div>
+                <div class="chapter-title">La Struttura</div>
+            </a>
+            <a href="it/005.html" class="chapter-item" data-chapter="5">
+                <div class="chapter-number">Capitolo 005</div>
+                <div class="chapter-title">La Porta Si Apre</div>
+            </a>
+            <a href="it/006.html" class="chapter-item" data-chapter="6">
+                <div class="chapter-number">Capitolo 006</div>
+                <div class="chapter-title">Dall'Altra Parte</div>
+            </a>
+            <a href="it/007.html" class="chapter-item" data-chapter="7">
+                <div class="chapter-number">Capitolo 007</div>
+                <div class="chapter-title">I Sussurri</div>
+            </a>
+            <a href="it/008.html" class="chapter-item" data-chapter="8">
+                <div class="chapter-number">Capitolo 008</div>
+                <div class="chapter-title">Il Prezzo</div>
+            </a>
+            <a href="it/009.html" class="chapter-item" data-chapter="9">
+                <div class="chapter-number">Capitolo 009</div>
+                <div class="chapter-title">La Scelta</div>
+            </a>
+            <a href="it/010.html" class="chapter-item" data-chapter="10">
+                <div class="chapter-number">Capitolo 010</div>
+                <div class="chapter-title">Ciò che Rimane</div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Book 1: The Door — Echoes of Nyx © 2026</p>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../book2/index.html">Book 2: The Bridge</a>
+        </div>
+    </footer>
+
+    <div class="matrix-bg"><canvas id="matrix"></canvas></div>
+
+    <script>
+        // Theme Toggle
+        const themeButtons = document.querySelectorAll('.theme-btn');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeButtons(savedTheme);
+
+        themeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const theme = btn.getAttribute('data-theme');
+                html.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                updateThemeButtons(theme);
+            });
+        });
+
+        function updateThemeButtons(activeTheme) {
+            themeButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-theme') === activeTheme);
+            });
+        }
+
+        // Language Toggle
+        const langButtons = document.querySelectorAll('.lang-btn');
+        const chaptersEn = document.getElementById('chapters-en');
+        const chaptersIt = document.getElementById('chapters-it');
+        const chaptersTitle = document.getElementById('chapters-title');
+
+        // Check URL for lang parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlLang = urlParams.get('lang');
+        if (urlLang === 'it') {
+            setLanguage('it');
+        }
+
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.getAttribute('data-lang');
+                setLanguage(lang);
+            });
+        });
+
+        function setLanguage(lang) {
+            langButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+            });
+            
+            if (lang === 'it') {
+                chaptersEn.classList.add('hidden');
+                chaptersIt.classList.remove('hidden');
+                chaptersTitle.textContent = 'Capitoli';
+                localStorage.setItem('book1-lang', 'it');
+            } else {
+                chaptersEn.classList.remove('hidden');
+                chaptersIt.classList.add('hidden');
+                chaptersTitle.textContent = 'Chapters';
+                localStorage.setItem('book1-lang', 'en');
+            }
+        }
+
+        // Progress Tracking
+        function updateProgress() {
+            const currentLang = localStorage.getItem('book1-lang') || 'en';
+            const readChapters = JSON.parse(localStorage.getItem('book1-read') || '[]');
+            const totalChapters = 10;
+            const readCount = readChapters.length;
+            const percentage = (readCount / totalChapters) * 100;
+
+            document.getElementById('progress-text').textContent = 
+                `${readCount} / ${totalChapters} chapters`;
+            document.getElementById('progress-bar').style.width = `${percentage}%`;
+
+            // Mark read chapters
+            document.querySelectorAll('.chapter-item').forEach(item => {
+                const chapterNum = parseInt(item.getAttribute('data-chapter'));
+                if (readChapters.includes(chapterNum)) {
+                    item.style.opacity = '0.6';
+                }
+            });
+        }
+
+        updateProgress();
+
+        // Matrix Effect
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*';
+        const fontSize = 14;
+        const columns = Math.floor(canvas.width / fontSize);
+        const drops = Array(columns).fill(1);
+
+        function draw() {
+            if (html.getAttribute('data-theme') !== 'matrix') {
+                requestAnimationFrame(draw);
+                return;
+            }
+            
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#00ff00';
+            ctx.font = fontSize + 'px monospace';
+            
+            for(let i = 0; i < drops.length; i++) {
+                ctx.fillText(chars[Math.floor(Math.random() * chars.length)], i * fontSize, drops[i] * fontSize);
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                drops[i]++;
+            }
+            requestAnimationFrame(draw);
+        }
+        draw();
+    </script>
+</body>
+</html>
