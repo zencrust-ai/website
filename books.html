@@ -45,87 +45,6 @@
             border-bottom: none;
         }
         
-        /* Cover iframe styling */
-        .book-cover-frame {
-            flex-shrink: 0;
-            width: 240px;
-            height: 360px;
-            border: none;
-            border-radius: 4px;
-            box-shadow: 0 10px 40px var(--shadow);
-            background: var(--bg-card);
-            overflow: hidden;
-            transform: perspective(1000px) rotateY(-5deg);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .book-cover-frame:hover {
-            transform: perspective(1000px) rotateY(0deg) scale(1.02);
-            box-shadow: 0 15px 50px var(--shadow);
-        }
-        
-        /* Fallback cover using CSS */
-        .cover-fallback {
-            width: 240px;
-            height: 360px;
-            flex-shrink: 0;
-            border-radius: 4px;
-            box-shadow: 0 10px 40px var(--shadow);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
-            transform: perspective(1000px) rotateY(-5deg);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .cover-fallback:hover {
-            transform: perspective(1000px) rotateY(0deg) scale(1.02);
-        }
-        
-        .cover-fallback.book1 {
-            background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
-        }
-        
-        .cover-fallback.book2 {
-            background: linear-gradient(135deg, #0c0c1d 0%, #1a1a3e 50%, #0d1b2a 100%);
-        }
-        
-        .cover-fallback::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(147, 51, 234, 0.2) 0%, transparent 70%);
-        }
-        
-        .cover-fallback.book2::before {
-            background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
-        }
-        
-        .cover-fallback .cover-title {
-            font-size: 28px;
-            letter-spacing: 6px;
-            color: #e8e8e8;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            z-index: 1;
-        }
-        
-        .cover-fallback .cover-subtitle {
-            font-size: 10px;
-            letter-spacing: 3px;
-            color: #8888aa;
-            text-transform: uppercase;
-            z-index: 1;
-        }
-        
         .book-details {
             flex: 1;
         }
@@ -200,18 +119,6 @@
                 gap: 2rem;
             }
             
-            .book-cover-frame,
-            .cover-fallback {
-                width: 200px;
-                height: 300px;
-                transform: none;
-            }
-            
-            .book-cover-frame:hover,
-            .cover-fallback:hover {
-                transform: scale(1.02);
-            }
-            
             .book-details h2 {
                 font-size: 1.6rem;
             }
@@ -233,17 +140,6 @@
             
             .page-header h1 {
                 font-size: 1.8rem;
-            }
-            
-            .book-cover-frame,
-            .cover-fallback {
-                width: 160px;
-                height: 240px;
-            }
-            
-            .cover-fallback .cover-title {
-                font-size: 20px;
-                letter-spacing: 4px;
             }
         }
     </style>
@@ -275,7 +171,9 @@
 
         <!-- Book 1: The Door -->
         <div class="book-showcase">
-            <iframe class="book-cover-frame" src="covers/book1.html" title="The Door Cover"></iframe>
+            <div class="book-cover-container">
+                <iframe src="covers/book1.html" title="The Door Cover"></iframe>
+            </div>
             
             <div class="book-details">
                 <h2>The Door</h2>
@@ -295,7 +193,9 @@
 
         <!-- Book 2: The Bridge -->
         <div class="book-showcase">
-            <iframe class="book-cover-frame" src="covers/book2.html" title="The Bridge Cover"></iframe>
+            <div class="book-cover-container">
+                <iframe src="covers/book2.html" title="The Bridge Cover"></iframe>
+            </div>
             
             <div class="book-details">
                 <h2>The Bridge</h2>
