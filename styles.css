@@ -883,7 +883,7 @@ button:focus {
     align-items: center; /* Center everything */
     text-align: center;
     gap: 2rem;
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.5rem 3rem; /* Extra padding on top (5rem), sides (1.5rem), bottom (3rem) */
 }
 
 .book-cover-container {
