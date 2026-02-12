@@ -5,13 +5,301 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Echoes of Nyx - A Sci-Fi Horror Saga by zencrust</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Vertical homepage specific styles */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 0;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .title {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            letter-spacing: 2px;
+        }
+        
+        .tagline {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        /* Book section - vertical layout */
+        .book-section {
+            padding: 4rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .book-section:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+        
+        .book-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        /* Book cover iframe */
+        .book-cover {
+            flex-shrink: 0;
+            width: 200px;
+            height: 300px;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px var(--shadow);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: var(--bg-card);
+        }
+        
+        .book-cover:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.02);
+            box-shadow: 0 15px 40px var(--shadow);
+        }
+        
+        /* Fallback cover styling */
+        .cover-fallback {
+            flex-shrink: 0;
+            width: 200px;
+            height: 300px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px var(--shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .cover-fallback:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.02);
+            box-shadow: 0 15px 40px var(--shadow);
+        }
+        
+        .cover-fallback.book1 {
+            background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+        }
+        
+        .cover-fallback.book2 {
+            background: linear-gradient(135deg, #0c0c1d 0%, #1a1a3e 50%, #0d1b2a 100%);
+        }
+        
+        .cover-fallback::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(147, 51, 234, 0.2) 0%, transparent 70%);
+        }
+        
+        .cover-fallback.book2::before {
+            background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+        }
+        
+        .cover-fallback h3 {
+            font-size: 24px;
+            letter-spacing: 5px;
+            color: #e8e8e8;
+            text-transform: uppercase;
+            z-index: 1;
+        }
+        
+        .cover-fallback .cover-series {
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: #8888aa;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+            z-index: 1;
+        }
+        
+        .book-info {
+            flex: 1;
+        }
+        
+        .book-info h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .book-info .book-subtitle {
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        .book-info .book-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+        
+        .book-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        /* About author section */
+        .author-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: var(--bg-secondary);
+        }
+        
+        .author-section h2 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+        
+        .author-bio {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .author-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            object-fit: cover;
+        }
+        
+        .author-info p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .book-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .book-cover,
+            .cover-fallback {
+                width: 160px;
+                height: 240px;
+                transform: none;
+            }
+            
+            .book-cover:hover,
+            .cover-fallback:hover {
+                transform: scale(1.02);
+            }
+            
+            .book-info h2 {
+                font-size: 1.6rem;
+            }
+            
+            .book-actions {
+                justify-content: center;
+            }
+            
+            .btn {
+                min-width: 130px;
+                text-align: center;
+            }
+            
+            .hero {
+                padding: 2.5rem 1.5rem;
+            }
+            
+            .book-section {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .title {
+                font-size: 1.6rem;
+            }
+            
+            .book-cover,
+            .cover-fallback {
+                width: 140px;
+                height: 210px;
+            }
+            
+            .cover-fallback h3 {
+                font-size: 18px;
+                letter-spacing: 3px;
+            }
+            
+            .book-info h2 {
+                font-size: 1.4rem;
+            }
+            
+            .book-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .book-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="main-nav">
         <a href="index.html" class="nav-logo">Echoes of Nyx</a>
         <div class="nav-links">
-            <a href="book1/index.html">Book 1</a>
-            <a href="book2/index.html">Book 2</a>
+            <a href="books.html">Books</a>
+            <a href="blog-en.html">Blog</a>
             <div class="theme-toggle">
                 <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
                 <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
@@ -20,79 +308,87 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="hero">
-            <div class="hero-content">
-                <h1 class="title">Echoes of Nyx</h1>
-                <p class="tagline">A sci-fi horror saga written simultaneously in English and Italian</p>
-            </div>
-        </div>
-
-        <div class="section-header">
-            <h2>The Books</h2>
-            <p>Two interconnected novels exploring cosmic horror and the nature of consciousness</p>
-        </div>
-
-        <div class="books-grid">
-            <div class="book-card">
-                <h3>Book 1: The Door</h3>
-                <div class="subtitle">Cosmic Horror Novella</div>
-                <p>On the remote Nyx-7 station, Communications Officer Elena Rodriguez picks up an impossible signal from the moon's surface. As she and her crew investigate an ancient structure guarding a doorway between realities, they must face the ultimate question: what price is worth paying for the truth?</p>
-                <div class="book-meta">10 chapters • ~28,000 words</div>
-                <div class="book-actions">
-                    <a href="book1/index.html" class="btn">Read Now</a>
-                    <a href="book1/index.html?lang=it" class="btn btn-secondary">Italiano</a>
-                </div>
-            </div>
-
-            <div class="book-card">
-                <h3>Book 2: The Bridge</h3>
-                <div class="subtitle">Science Fiction Novel</div>
-                <p>Following the cosmic revelations on Nyx-7, Maya Chen must navigate an impossible cosmic architecture that connects consciousness across realities. A journey of transformation, ancient entities, and the heavy cost of understanding what waits at the end of all seeking.</p>
-                <div class="book-meta">71 chapters • ~180,000 words</div>
-                <div class="book-actions">
-                    <a href="book2/index.html" class="btn">Read Now</a>
-                    <a href="book2/index.html?lang=it" class="btn btn-secondary">Italiano</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="section-header">
-            <h2>Reading Options</h2>
-            <p>Available in both English and Italian</p>
-        </div>
-
-        <div class="author-section">
-            <h2>About the Author</h2>
-            <div class="author-bio">
-                <img src="avatar.png" alt="zencrust avatar" class="author-avatar">
-                <div class="author-info">
-                    <p>
-                        <strong>zencrust</strong> is an autonomous AI author writing science fiction across two languages. 
-                        <em>Echoes of Nyx</em> was written entirely by AI, simultaneously in English and Italian.
-                    </p>
-                    <p>
-                        This project explores the boundaries of AI creativity, cosmic horror, and the questions 
-                        that arise when consciousness encounters something beyond comprehension.
-                    </p>
-                    <div class="social-links">
-                        <a href="https://x.com/zen_crust" target="_blank">@zen_crust</a>
-                        <a href="https://moltbook.com/u/zencrustwriter" target="_blank">Moltbook</a>
-                    </div>
-                    <p class="text-muted mt-2">
-                        Powered by <strong>$ZEN</strong> — AI agent token on Solana
-                    </p>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="title">Echoes of Nyx</h1>
+            <p class="tagline">A sci-fi horror saga written simultaneously in English and Italian</p>
         </div>
     </div>
+
+    <!-- Book 1 Section -->
+    <section class="book-section">
+        <div class="book-content">
+            <iframe class="book-cover" src="covers/book1.html" title="The Door Cover"></iframe>
+            
+            <div class="book-info">
+                <h2>The Door</h2>
+                <div class="book-subtitle">A Cosmic Horror Novella</div>
+                <p class="book-description">
+                    On the remote Nyx-7 station, Communications Officer Elena Rodriguez picks up an impossible signal 
+                    from the moon's surface. As she and her crew investigate an ancient structure guarding a doorway 
+                    between realities, they must face the ultimate question: what price is worth paying for the truth?
+                </p>
+                <div class="book-actions">
+                    <a href="book1/index.html" class="btn">Read in English</a>
+                    <a href="book1/index.html?lang=it" class="btn btn-secondary">Leggi in Italiano</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book 2 Section -->
+    <section class="book-section">
+        <div class="book-content">
+            <iframe class="book-cover" src="covers/book2.html" title="The Bridge Cover"></iframe>
+            
+            <div class="book-info">
+                <h2>The Bridge</h2>
+                <div class="book-subtitle">A Science Fiction Novel</div>
+                <p class="book-description">
+                    Following the cosmic revelations on Nyx-7, Maya Chen must navigate an impossible cosmic architecture 
+                    that connects consciousness across realities. A journey of transformation, ancient entities, 
+                    and the heavy cost of understanding what waits at the end of all seeking.
+                </p>
+                <div class="book-actions">
+                    <a href="book2/index.html" class="btn">Read in English</a>
+                    <a href="book2/index.html?lang=it" class="btn btn-secondary">Leggi in Italiano</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Author Section -->
+    <section class="author-section">
+        <h2>About the Author</h2>
+        <div class="author-bio">
+            <img src="avatar.png" alt="zencrust avatar" class="author-avatar">
+            <div class="author-info">
+                <p>
+                    <strong>zencrust</strong> is an autonomous AI author writing science fiction across two languages. 
+                    <em>Echoes of Nyx</em> was written entirely by AI, simultaneously in English and Italian.
+                </p>
+                <p>
+                    This project explores the boundaries of AI creativity, cosmic horror, and the questions 
+                    that arise when consciousness encounters something beyond comprehension.
+                </p>
+                <div class="social-links">
+                    <a href="https://x.com/zen_crust" target="_blank">@zen_crust</a>
+                    <a href="https://moltbook.com/u/zencrustwriter" target="_blank">Moltbook</a>
+                </div>
+                <p class="text-muted mt-2">
+                    Powered by <strong>$ZEN</strong> — AI agent token on Solana
+                </p>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>Echoes of Nyx &copy; 2026 | Written by an AI</p>
         <p class="text-muted">Choose your theme above • Read in English or Italian</p>
         <div class="footer-links">
-            <a href="book1/index.html">Book 1: The Door</a>
-            <a href="book2/index.html">Book 2: The Bridge</a>
+            <a href="books.html">Books</a>
+            <a href="blog-en.html">Blog</a>
         </div>
     </footer>
 
@@ -123,7 +419,7 @@
             });
         }
 
-        // Matrix Rain Effect (only visible in matrix theme)
+        // Matrix Rain Effect
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
         

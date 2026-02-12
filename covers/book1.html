@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Door - Book Cover</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 400px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1a1a2e;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            overflow: hidden;
+        }
+        .cover {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, 
+                #0d0d1a 0%, 
+                #1a1a2e 20%, 
+                #16213e 50%, 
+                #0f0f23 80%, 
+                #000000 100%);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        /* Stars background */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+                radial-gradient(2px 2px at 160px 120px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(1px 1px at 230px 80px, #fff, transparent),
+                radial-gradient(2px 2px at 300px 150px, rgba(255,255,255,0.7), transparent),
+                radial-gradient(1px 1px at 350px 60px, #fff, transparent),
+                radial-gradient(2px 2px at 80px 200px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 180px 280px, #fff, transparent),
+                radial-gradient(2px 2px at 320px 250px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(1px 1px at 60px 400px, #fff, transparent),
+                radial-gradient(2px 2px at 280px 450px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 150px 500px, #fff, transparent),
+                radial-gradient(2px 2px at 380px 350px, rgba(255,255,255,0.7), transparent),
+                radial-gradient(1px 1px at 250px 550px, #fff, transparent),
+                radial-gradient(2px 2px at 120px 350px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(1px 1px at 40px 500px, #fff, transparent),
+                radial-gradient(2px 2px at 360px 480px, rgba(255,255,255,0.8), transparent);
+            opacity: 0.6;
+        }
+        /* Nebula effect */
+        .nebula {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 200px;
+            background: radial-gradient(ellipse at center, 
+                rgba(147, 51, 234, 0.3) 0%, 
+                rgba(59, 130, 246, 0.2) 40%,
+                transparent 70%);
+            filter: blur(20px);
+        }
+        /* The Door */
+        .door-frame {
+            position: relative;
+            width: 140px;
+            height: 220px;
+            border: 4px solid #4a4a6a;
+            background: linear-gradient(180deg, 
+                rgba(20, 20, 40, 0.9) 0%, 
+                rgba(10, 10, 25, 0.95) 100%);
+            box-shadow: 
+                0 0 30px rgba(147, 51, 234, 0.5),
+                inset 0 0 50px rgba(0, 0, 0, 0.8),
+                inset 0 0 20px rgba(147, 51, 234, 0.2);
+            margin-bottom: 40px;
+            z-index: 10;
+        }
+        .door-frame::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px solid rgba(147, 51, 234, 0.3);
+        }
+        .door-opening {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 85%;
+            background: linear-gradient(180deg, 
+                rgba(147, 51, 234, 0.6) 0%, 
+                rgba(59, 130, 246, 0.4) 50%,
+                rgba(20, 20, 40, 0.9) 100%);
+            box-shadow: 
+                0 0 40px rgba(147, 51, 234, 0.8),
+                inset 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+        /* Light emanating from door */
+        .door-glow {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 60px;
+            background: radial-gradient(ellipse at center, 
+                rgba(147, 51, 234, 0.4) 0%, 
+                transparent 70%);
+            filter: blur(15px);
+        }
+        /* Title */
+        .title {
+            font-size: 42px;
+            font-weight: 400;
+            letter-spacing: 8px;
+            color: #e8e8e8;
+            text-transform: uppercase;
+            text-shadow: 
+                0 0 20px rgba(147, 51, 234, 0.8),
+                0 0 40px rgba(147, 51, 234, 0.4);
+            margin-bottom: 15px;
+            z-index: 10;
+        }
+        /* Subtitle */
+        .subtitle {
+            font-size: 14px;
+            letter-spacing: 4px;
+            color: #8888aa;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            z-index: 10;
+        }
+        /* Series name */
+        .series {
+            font-size: 11px;
+            letter-spacing: 6px;
+            color: #666688;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            z-index: 10;
+        }
+        /* Author */
+        .author {
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #9999bb;
+            z-index: 10;
+            margin-top: auto;
+            margin-bottom: 40px;
+        }
+        /* Cosmic particles */
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(147, 51, 234, 0.8);
+            border-radius: 50%;
+            box-shadow: 0 0 6px rgba(147, 51, 234, 1);
+        }
+        .particle:nth-child(1) { top: 15%; left: 20%; animation: float 4s ease-in-out infinite; }
+        .particle:nth-child(2) { top: 25%; right: 15%; animation: float 5s ease-in-out infinite 1s; }
+        .particle:nth-child(3) { top: 45%; left: 10%; animation: float 3.5s ease-in-out infinite 0.5s; }
+        .particle:nth-child(4) { top: 55%; right: 12%; animation: float 4.5s ease-in-out infinite 2s; }
+        .particle:nth-child(5) { top: 75%; left: 25%; animation: float 5.5s ease-in-out infinite 1.5s; }
+        .particle:nth-child(6) { top: 80%; right: 20%; animation: float 4s ease-in-out infinite 0.8s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
+            50% { transform: translateY(-10px) scale(1.2); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <div class="stars"></div>
+        <div class="nebula"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        
+        <div class="subtitle">A Cosmic Horror Novella</div>
+        <div class="series">Echoes of Nyx • Book One</div>
+        
+        <div class="door-frame">
+            <div class="door-opening"></div>
+        </div>
+        <div class="door-glow"></div>
+        
+        <div class="title">The Door</div>
+        
+        <div class="author">zencrust</div>
+    </div>
+</body>
+</html>
