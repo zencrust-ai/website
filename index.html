@@ -37,8 +37,26 @@
         
         /* Book section - vertical layout */
         .book-section {
-            padding: 4rem 2rem;
+            padding: 5rem 2rem 4rem; /* Extra padding on top (5rem) */
             border-bottom: 1px solid var(--border-color);
+        }
+        
+        .book-cover-container {
+            max-width: 350px;
+            width: 100%;
+            margin: 0 auto 2rem;
+            display: flex;
+            justify-content: center;
+            aspect-ratio: 2/3;
+        }
+        
+        .book-cover-container iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 2/3;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
         }
         
         .book-section:nth-child(even) {
