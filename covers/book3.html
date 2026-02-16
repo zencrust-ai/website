@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kepler Archive - Book Cover</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 2/3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0a0514;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            overflow: hidden;
+        }
+        .cover {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                #0a0514 0%, 
+                #1a0d2e 25%, 
+                #0f1429 50%, 
+                #0d0820 75%,
+                #0a0514 100%);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        /* Crystalline background structure */
+        .crystal-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+        }
+        
+        /* Crystal facets */
+        .crystal {
+            position: absolute;
+            background: linear-gradient(135deg, 
+                rgba(88, 28, 135, 0.4) 0%, 
+                rgba(45, 27, 105, 0.3) 50%,
+                rgba(20, 10, 60, 0.5) 100%);
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            box-shadow: 
+                inset 0 0 30px rgba(147, 51, 234, 0.3),
+                0 0 40px rgba(88, 28, 135, 0.2);
+        }
+        
+        .crystal:nth-child(1) { 
+            width: 200px; 
+            height: 200px; 
+            top: 5%; 
+            left: 10%;
+            transform: rotate(15deg);
+            opacity: 0.6;
+        }
+        .crystal:nth-child(2) { 
+            width: 150px; 
+            height: 150px; 
+            top: 15%; 
+            right: 5%;
+            transform: rotate(-30deg);
+            opacity: 0.5;
+        }
+        .crystal:nth-child(3) { 
+            width: 180px; 
+            height: 180px; 
+            bottom: 20%; 
+            left: 5%;
+            transform: rotate(45deg);
+            opacity: 0.4;
+        }
+        .crystal:nth-child(4) { 
+            width: 160px; 
+            height: 160px; 
+            bottom: 30%; 
+            right: 10%;
+            transform: rotate(-15deg);
+            opacity: 0.5;
+        }
+        .crystal:nth-child(5) { 
+            width: 120px; 
+            height: 120px; 
+            top: 40%; 
+            left: 25%;
+            transform: rotate(60deg);
+            opacity: 0.3;
+        }
+        .crystal:nth-child(6) { 
+            width: 100px; 
+            height: 100px; 
+            top: 50%; 
+            right: 20%;
+            transform: rotate(-45deg);
+            opacity: 0.35;
+        }
+        
+        /* Central Archive Structure */
+        .archive-container {
+            position: relative;
+            width: 320px;
+            height: 280px;
+            margin-bottom: 40px;
+            z-index: 10;
+        }
+        
+        /* Central crystalline core */
+        .core {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 120px;
+            background: linear-gradient(180deg, 
+                rgba(147, 51, 234, 0.9) 0%, 
+                rgba(88, 28, 135, 0.8) 50%,
+                rgba(45, 27, 105, 0.9) 100%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            box-shadow: 
+                0 0 60px rgba(147, 51, 234, 0.6),
+                0 0 100px rgba(88, 28, 135, 0.4),
+                inset 0 0 40px rgba(200, 150, 255, 0.3);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { 
+                opacity: 0.8; 
+                box-shadow: 
+                    0 0 60px rgba(147, 51, 234, 0.6),
+                    0 0 100px rgba(88, 28, 135, 0.4),
+                    inset 0 0 40px rgba(200, 150, 255, 0.3);
+            }
+            50% { 
+                opacity: 1; 
+                box-shadow: 
+                    0 0 80px rgba(147, 51, 234, 0.8),
+                    0 0 140px rgba(88, 28, 135, 0.5),
+                    inset 0 0 50px rgba(200, 150, 255, 0.4);
+            }
+        }
+        
+        /* Orbiting crystal fragments */
+        .orbit-crystal {
+            position: absolute;
+            background: linear-gradient(135deg, 
+                rgba(100, 50, 180, 0.8) 0%, 
+                rgba(60, 30, 120, 0.7) 100%);
+            box-shadow: 0 0 20px rgba(100, 50, 180, 0.5);
+        }
+        
+        .orbit-crystal:nth-child(2) {
+            width: 30px;
+            height: 30px;
+            top: 20%;
+            left: 20%;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            animation: float1 6s ease-in-out infinite;
+        }
+        .orbit-crystal:nth-child(3) {
+            width: 25px;
+            height: 25px;
+            top: 15%;
+            right: 25%;
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            animation: float2 7s ease-in-out infinite;
+        }
+        .orbit-crystal:nth-child(4) {
+            width: 35px;
+            height: 35px;
+            bottom: 25%;
+            left: 15%;
+            clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+            animation: float3 5s ease-in-out infinite;
+        }
+        .orbit-crystal:nth-child(5) {
+            width: 20px;
+            height: 20px;
+            bottom: 20%;
+            right: 20%;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            animation: float1 8s ease-in-out infinite reverse;
+        }
+        .orbit-crystal:nth-child(6) {
+            width: 28px;
+            height: 28px;
+            top: 50%;
+            right: 10%;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            animation: float2 6.5s ease-in-out infinite;
+        }
+        .orbit-crystal:nth-child(7) {
+            width: 22px;
+            height: 22px;
+            top: 45%;
+            left: 10%;
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            animation: float3 7.5s ease-in-out infinite reverse;
+        }
+        
+        @keyframes float1 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(10px, -15px) rotate(180deg); }
+        }
+        @keyframes float2 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-12px, 10px) rotate(-180deg); }
+        }
+        @keyframes float3 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(8px, 12px) rotate(120deg); }
+        }
+        
+        /* Data streams/lines connecting to core */
+        .data-stream {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(147, 51, 234, 0.6), 
+                rgba(88, 28, 135, 0.4),
+                transparent);
+            opacity: 0.5;
+        }
+        .data-stream:nth-child(8) { 
+            width: 80px; 
+            top: 30%; 
+            left: 50%; 
+            transform: translateX(-100%) rotate(-15deg);
+        }
+        .data-stream:nth-child(9) { 
+            width: 100px; 
+            top: 40%; 
+            right: 50%; 
+            transform: translateX(100%) rotate(20deg);
+        }
+        .data-stream:nth-child(10) { 
+            width: 90px; 
+            bottom: 35%; 
+            left: 50%; 
+            transform: translateX(-100%) rotate(10deg);
+        }
+        
+        /* Energy particles */
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(180, 130, 255, 0.9);
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(180, 130, 255, 1);
+            animation: drift 5s ease-in-out infinite;
+        }
+        .particle:nth-child(11) { top: 10%; left: 20%; animation-delay: 0s; }
+        .particle:nth-child(12) { top: 25%; right: 15%; animation-delay: 1s; }
+        .particle:nth-child(13) { top: 60%; left: 30%; animation-delay: 2s; }
+        .particle:nth-child(14) { bottom: 25%; right: 30%; animation-delay: 3s; }
+        .particle:nth-child(15) { bottom: 15%; left: 45%; animation-delay: 4s; }
+        
+        @keyframes drift {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+            25% { transform: translateY(-20px) translateX(10px); opacity: 0.8; }
+            50% { transform: translateY(-10px) translateX(-15px); opacity: 1; }
+            75% { transform: translateY(-25px) translateX(5px); opacity: 0.5; }
+        }
+        
+        /* Ambient glow behind archive */
+        .ambient-glow {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            height: 300px;
+            background: radial-gradient(ellipse at center, 
+                rgba(88, 28, 135, 0.25) 0%, 
+                rgba(45, 27, 105, 0.15) 40%,
+                transparent 70%);
+            filter: blur(40px);
+            z-index: 5;
+        }
+        
+        /* Subtitle */
+        .subtitle {
+            font-size: 13px;
+            letter-spacing: 5px;
+            color: #a080c0;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            padding-top: 40px;
+            z-index: 10;
+        }
+        
+        /* Series name */
+        .series {
+            font-size: 11px;
+            letter-spacing: 6px;
+            color: #705090;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            z-index: 10;
+        }
+        
+        /* Title */
+        .title {
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: 8px;
+            color: #e8e0f0;
+            text-transform: uppercase;
+            text-align: center;
+            text-shadow: 
+                0 0 30px rgba(147, 51, 234, 0.8),
+                0 0 60px rgba(88, 28, 135, 0.5);
+            margin-bottom: 8px;
+            padding-left: 12px;
+            z-index: 10;
+            line-height: 1.3;
+        }
+        
+        .title-line2 {
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 10px;
+            color: #c0a0e0;
+            text-transform: uppercase;
+            text-align: center;
+            text-shadow: 
+                0 0 25px rgba(147, 51, 234, 0.6),
+                0 0 50px rgba(88, 28, 135, 0.4);
+            margin-bottom: 60px;
+            padding-left: 10px;
+            z-index: 10;
+        }
+        
+        /* Italian title */
+        .title-it {
+            font-size: 14px;
+            letter-spacing: 4px;
+            color: #8060a0;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 40px;
+            z-index: 10;
+        }
+        
+        /* Author */
+        .author {
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: #9080b0;
+            z-index: 10;
+            margin-top: auto;
+            margin-bottom: 40px;
+        }
+        
+        /* Subtle vignette */
+        .vignette {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, 
+                transparent 40%, 
+                rgba(10, 5, 20, 0.6) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <div class="vignette"></div>
+        
+        <div class="crystal-bg">
+            <div class="crystal"></div>
+            <div class="crystal"></div>
+            <div class="crystal"></div>
+            <div class="crystal"></div>
+            <div class="crystal"></div>
+            <div class="crystal"></div>
+        </div>
+        
+        <div class="ambient-glow"></div>
+        
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        
+        <div class="subtitle">A Science Fiction Novel</div>
+        <div class="series">Echoes of Nyx • Book Three</div>
+        
+        <div class="archive-container">
+            <div class="core"></div>
+            <div class="orbit-crystal"></div>
+            <div class="orbit-crystal"></div>
+            <div class="orbit-crystal"></div>
+            <div class="orbit-crystal"></div>
+            <div class="orbit-crystal"></div>
+            <div class="orbit-crystal"></div>
+            <div class="data-stream"></div>
+            <div class="data-stream"></div>
+            <div class="data-stream"></div>
+        </div>
+        
+        <div class="title">The Kepler</div>
+        <div class="title-line2">Archive</div>
+        <div class="title-it">L'Archivio Kepler</div>
+        
+        <div class="author">zencrust</div>
+    </div>
+</body>
+</html>

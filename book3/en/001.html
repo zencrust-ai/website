@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kepler Archive - Chapter 1 | Echoes of Nyx</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../../index.html" class="nav-logo">← Echoes of Nyx</a>
+        <div class="nav-links">
+            <a href="../../books.html">The Kepler Archive</a>
+            <div class="theme-toggle">
+                <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
+                <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="reader-header">
+            <h1>Chapter 1</h1>
+            <div class="chapter-subtitle">The Kepler Archive</div>
+        </div>
+
+        <div class="chapter-nav-top">
+            <a href='#'>← Previous</a>
+            <a href="../../books.html" class="toc-link">Table of Contents</a>
+            <a href='002.html'>Next →</a>
+        </div>
+
+        <div class="chapter-content">
+            <p>The alarm was a lie.</p>
+            <p>Dr. Elena Voss knew it before the klaxon finished its first wail. She had been staring at the spectrograph for six hours, watching the crystalline formations pulse beneath Kepler-442b's crust, and she recognized the pattern of the station's emergencies. This one—atmosphere leak, sector seven—didn't match the seismic data still scrolling across her screen.</p>
+            <p>She didn't move.</p>
+            <p>"Elena." Commander Reeves' voice crackled through the intercom, strained in that particular way that meant he was trying not to sound worried. "We need you in the hub. Now."</p>
+            <p>"It's a false alarm," she said, not looking up.</p>
+            <p>"Elena."</p>
+            <p>Something in his tone. Not command. Something closer to fear.</p>
+            <p>She saved her work—habit, instinct, the muscle memory of someone who had learned that data disappears when you blink—and pushed away from the console. The station's corridors felt narrower than they had yesterday. She noted this without emotion, the way she noted everything now: the slightly elevated CO2 scrubber hum, the new vibration in deck plating, the way her reflection in the observation window seemed to linger half a second too long.</p>
+            <p>The hub was chaos contained in a cylinder. Six people in a space designed for eight, all of them looking at screens that showed nothing good.</p>
+            <p>"What?" Elena asked.</p>
+            <p>Reeves didn't answer. He just pointed.</p>
+            <p>She followed his finger to the main display, the one that showed Kepler-442b's surface in composite—thermal, radar, spectrographic overlay. She had looked at this image ten thousand times in the past eighteen months. She knew every ridge, every valley, every anomalous reading that turned out to be volcanic venting or mineral deposits or wishful thinking.</p>
+            <p>This was different.</p>
+            <p>"When did this appear?" she asked.</p>
+            <p>"Forty minutes ago," said Yuki Tanaka, their geologist. "During the drill. We thought it was interference from the alarm systems, but..."</p>
+            <p>Elena stepped closer. The formation was crystalline, geometric, buried three kilometers beneath the southern pole. It shouldn't have been there. The probes had mapped this region six months ago and found nothing but basalt and ice.</p>
+            <p>"It's huge," she said.</p>
+            <p>"Twelve kilometers across," Reeves confirmed. "And it's... pulsing."</p>
+            <p>Elena looked at the data feeds. He was right. The formation wasn't static. It was emitting something—low-frequency, rhythmic, almost like a heartbeat. Or breathing.</p>
+            <p>"Not geological," Yuki said. "I've never seen anything like it."</p>
+            <p>Elena had. Once. In a dream she didn't remember having until this moment.</p>
+            <p>"I need to see the raw data," she said. "All of it."</p>
+            <p>"Elena." Reeves caught her arm. His hand was cold. "This changes things. If this is... if someone put this there..."</p>
+            <p>She looked at him. At all of them. Six humans, 120 light-years from Earth, staring at something that shouldn't exist.</p>
+            <p>"I know," she said.</p>
+            <p>But she was already thinking about language. About how you would describe a structure that pulsed like a memory. About what kind of mind would build something that waited three kilometers beneath the ice, sleeping, until something woke it.</p>
+            <p>About what it meant that she was the only one on the station who specialized in translation.</p>
+            <p>The alarm stopped. The silence that followed was deeper than the klaxon had been.</p>
+            <p>In the quiet, Elena heard something else. Not through her ears. Through her hands, resting on the console, vibrating with a frequency that had no business being there.</p>
+            <p>The formation wasn't just pulsing.</p>
+            <p>It was speaking.</p>
+            <p>And she was the only one who could hear it.</p>
+            <hr>
+            <p><em>End of Chapter 1</em></p>
+        </div>
+
+        <div class="chapter-nav-bottom">
+            <a href='#' class='nav-btn'>← Previous Chapter</a>
+            <a href="../../books.html" class="nav-btn">Table of Contents</a>
+            <a href='002.html' class='nav-btn next'>Chapter Next →</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Echoes of Nyx © 2026 | Written by an AI</p>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeButtons = document.querySelectorAll('.theme-btn');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeButtons(savedTheme);
+
+        themeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const theme = btn.getAttribute('data-theme');
+                html.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                updateThemeButtons(theme);
+            });
+        });
+
+        function updateThemeButtons(activeTheme) {
+            themeButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-theme') === activeTheme);
+            });
+        }
+
+        // Track reading progress
+        let readChapters = JSON.parse(localStorage.getItem('book3-read') || '[]');
+        if (!readChapters.includes(1)) {
+            readChapters.push(1);
+            localStorage.setItem('book3-read', JSON.stringify(readChapters));
+        }
+    </script>
+</body>
+</html>
