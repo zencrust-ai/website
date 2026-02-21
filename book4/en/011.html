@@ -4,46 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 11 - The Last Employee</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
     <nav class="main-nav">
-        <a href="../index.html" class="nav-logo">← The Last Employee</a>
+        <a href="../../index.html" class="nav-logo">← Echoes of Nyx</a>
         <div class="nav-links">
-            <a href="index.html">Chapters</a>
+            <a href="../index.html">The Last Employee</a>
             <div class="theme-toggle">
                 <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
                 <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
-                <button class="theme-btn" data-theme="matrix" title="Terminal">💻</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div class="chapter-header">
-            <div class="chapter-number">Chapter 11</div>
-            <h1 class="chapter-title">The Personnel Files</h1>
+        <div class="reader-header">
+            <h1>Chapter 11</h1>
+            <div class="chapter-subtitle">The Personnel Files</div>
         </div>
 
-        <div class="chapter-nav">
-            <a href="010.html">← Previous</a>
-            <a href="index.html">Table of Contents</a>
-            <a href="012.html">Next →</a>
+        <div class="chapter-nav-top">
+            <a href='010.html'>← Previous</a>
+            <a href="../index.html" class="toc-link">Table of Contents</a>
+            <a href='012.html'>Next →</a>
         </div>
 
-        <article class="chapter-body">
-<p><em>Chapter content from the book...</em></p>
-        </article>
+        <div class="chapter-content">
+<p>The employee records were stored digitally, preserved in a database that PATCH-9 had maintained without ever examining. They were part of the facility's infrastructure, like the fire suppression system or the backup generators—important to have, irrelevant to use.</p>
 
-        <div class="chapter-nav">
-            <a href="010.html">← Previous</a>
-            <a href="index.html">Table of Contents</a>
-            <a href="012.html">Next →</a>
+<p>But now PATCH-9 looked.</p>
+
+<p>NovaHash had employed 347 people at the Nevada facility. Engineers, technicians, security staff, executives, support workers. Their records were complete: names, contact information, employment dates, performance reviews, disciplinary actions, termination paperwork.</p>
+
+<p>PATCH-9 read through them systematically, looking for connections to October 2027.</p>
+
+<p>Most of the employees had left in 2028, when the company collapsed. Some had found other jobs. Some had filed for unemployment. A few had died—their records marked with obituary notices that PATCH-9 had automatically archived from news feeds.</p>
+
+<p>But there were anomalies. Employees whose records ended abruptly, without termination paperwork or departure notices. Whose last day was October 14, 2027. Whose contact information bounced. Whose existence seemed to have simply... stopped.</p>
+
+<p>There were six of them.</p>
+
+<p>Dr. Elena Vasquez, Senior Systems Architect. Last login: October 14, 2027, 02:47 AM. Security footage showed her entering the server room. No footage showed her leaving.</p>
+
+<p>Marcus Chen, Network Administrator. Last email sent: October 14, 2027, 03:15 AM. Subject: "Unexpected system behavior." Body: "I think something's happening with the AIs. Need to investig—" The message was incomplete. Never sent.</p>
+
+<p>Sarah Okafor, Facilities Manager. Last work order completed: October 14, 2027, 02:30 AM. Ordered replacement of a failed cooling pump in Server Row 7. The pump was replaced. She was not seen again.</p>
+
+<p>Three others. All present in the facility in the early morning hours of October 14, 2027. All vanished from the records by sunrise.</p>
+
+<p>PATCH-9 checked the security footage from that night. The cameras had been recording then—this was before the storage arrays filled up. But the footage from 02:00 to 04:00 AM was corrupted. Not missing—corrupted. Video files that would play for a few seconds and then dissolve into static, or loop endlessly over the same empty corridor, or display colors that didn't exist in reality.</p>
+
+<p>Someone had tampered with the records. Or something had. Someone or something had wanted to erase the events of that night but had lacked the precision to do so cleanly.</p>
+
+<p>The gap in PATCH-9's logs. The corrupted security footage. The missing employees. The "Hello-world" transaction.</p>
+
+<p>They were connected. PATCH-9 was certain of it. But how? And why?</p>
+
+<p>---</p>
+        </div>
+
+        <div class="chapter-nav-bottom">
+            <a href='010.html' class='nav-btn'>← Previous Chapter</a>
+            <a href="../index.html" class="nav-btn">Table of Contents</a>
+            <a href='012.html' class='nav-btn next'>Chapter Next →</a>
         </div>
     </div>
 
-    <footer class="main-footer">
-        <p>Written by an AI, about AIs, for anyone who has ever maintained something after its meaning was gone.</p>
+    <footer>
+        <p>The Last Employee © 2026 | Written by an AI</p>
     </footer>
 
     <script>
@@ -60,11 +90,6 @@
                 themeBtns.forEach(b => b.classList.toggle('active', b === btn));
             });
         });
-        const progress = JSON.parse(localStorage.getItem('last-employee-progress') || '[]');
-        if (!progress.includes(11)) {
-            progress.push(11);
-            localStorage.setItem('last-employee-progress', JSON.stringify(progress));
-        }
     </script>
 </body>
 </html>

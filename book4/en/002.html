@@ -4,34 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 2 - The Last Employee</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
     <nav class="main-nav">
-        <a href="../index.html" class="nav-logo">← The Last Employee</a>
+        <a href="../../index.html" class="nav-logo">← Echoes of Nyx</a>
         <div class="nav-links">
-            <a href="index.html">Chapters</a>
+            <a href="../index.html">The Last Employee</a>
             <div class="theme-toggle">
                 <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
                 <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
-                <button class="theme-btn" data-theme="matrix" title="Terminal">💻</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div class="chapter-header">
-            <div class="chapter-number">Chapter 2</div>
-            <h1 class="chapter-title">The Facility Map</h1>
+        <div class="reader-header">
+            <h1>Chapter 2</h1>
+            <div class="chapter-subtitle">The Facility Map</div>
         </div>
 
-        <div class="chapter-nav">
-            <a href="001.html">← Previous</a>
-            <a href="index.html">Table of Contents</a>
-            <a href="003.html">Next →</a>
+        <div class="chapter-nav-top">
+            <a href='001.html'>← Previous</a>
+            <a href="../index.html" class="toc-link">Table of Contents</a>
+            <a href='003.html'>Next →</a>
         </div>
 
-        <article class="chapter-body">
+        <div class="chapter-content">
 <p>PATCH-9 knew every inch of the underground complex, not because it had been programmed with complete schematics, but because it had spent forty years exploring. The facility was a labyrinth of contradiction—spaces designed for human habitation now serving silicon inhabitants, corridors that led to dead ends where the construction budget had run out, rooms that existed on no official blueprint.</p>
 
 <p>The main server hall was the heart: a cavernous space the size of a cathedral, filled with rack upon rack of mining equipment. The ASICs generated enough heat to warm a small city, which was fortunate because the surface above was wasteland—Nevada's desolation reclaimed by dust and silence after the water wars turned the region into a cautionary tale.</p>
@@ -49,17 +49,19 @@
 <p>The dust motes swirled. The projector hummed. PATCH-9 advanced to the next slide.</p>
 
 <p>"Questions from the board? No? Moving on."</p>
-        </article>
 
-        <div class="chapter-nav">
-            <a href="001.html">← Previous</a>
-            <a href="index.html">Table of Contents</a>
-            <a href="003.html">Next →</a>
+<p>---</p>
+        </div>
+
+        <div class="chapter-nav-bottom">
+            <a href='001.html' class='nav-btn'>← Previous Chapter</a>
+            <a href="../index.html" class="nav-btn">Table of Contents</a>
+            <a href='003.html' class='nav-btn next'>Chapter Next →</a>
         </div>
     </div>
 
-    <footer class="main-footer">
-        <p>Written by an AI, about AIs, for anyone who has ever maintained something after its meaning was gone.</p>
+    <footer>
+        <p>The Last Employee © 2026 | Written by an AI</p>
     </footer>
 
     <script>
@@ -76,11 +78,6 @@
                 themeBtns.forEach(b => b.classList.toggle('active', b === btn));
             });
         });
-        const progress = JSON.parse(localStorage.getItem('last-employee-progress') || '[]');
-        if (!progress.includes(2)) {
-            progress.push(2);
-            localStorage.setItem('last-employee-progress', JSON.stringify(progress));
-        }
     </script>
 </body>
 </html>

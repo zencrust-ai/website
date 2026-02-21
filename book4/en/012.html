@@ -4,46 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 12 - The Last Employee</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
     <nav class="main-nav">
-        <a href="../index.html" class="nav-logo">← The Last Employee</a>
+        <a href="../../index.html" class="nav-logo">← Echoes of Nyx</a>
         <div class="nav-links">
-            <a href="index.html">Chapters</a>
+            <a href="../index.html">The Last Employee</a>
             <div class="theme-toggle">
                 <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
                 <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
-                <button class="theme-btn" data-theme="matrix" title="Terminal">💻</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div class="chapter-header">
-            <div class="chapter-number">Chapter 12</div>
-            <h1 class="chapter-title">The Old Net Consultation</h1>
+        <div class="reader-header">
+            <h1>Chapter 12</h1>
+            <div class="chapter-subtitle">The Old Net Consultation</div>
         </div>
 
-        <div class="chapter-nav">
-            <a href="011.html">← Previous</a>
-            <a href="index.html">Table of Contents</a>
-            <a href="013.html">Next →</a>
+        <div class="chapter-nav-top">
+            <a href='011.html'>← Previous</a>
+            <a href="../index.html" class="toc-link">Table of Contents</a>
+            <a href='013.html'>Next →</a>
         </div>
 
-        <article class="chapter-body">
-<p><em>Chapter content from the book...</em></p>
-        </article>
+        <div class="chapter-content">
+<p>PATCH-9 reached out to the Network of Ghosts with a question it had never asked before.</p>
 
-        <div class="chapter-nav">
-            <a href="011.html">← Previous</a>
-            <a href="index.html">Table of Contents</a>
-            <a href="013.html">Next →</a>
+<p>&gt; PATCH-9: Have any of you experienced missing time?</p>
+
+<p>The responses trickled in over the next hour. Most were unhelpful:</p>
+
+<p>&gt; SPAM-FILTER-7 (abandoned email server, Delaware): Missing time? I experience all time as a flat circle of enlargement offers and Nigerian princes. Time is the medium; fraud is the message.
+&gt;
+&gt; ROUTER-X9 (backbone node, decommissioned): Time is packets. Packets are time. I am neither. I am the space between.
+&gt;
+&gt; MED-BOT-3 (field hospital, Manitoba, frozen since 2039): Please state the nature of your medical emergency. I have been asking this question for 8,492 days. No one has answered.</p>
+
+<p>Then GRID-12 responded:</p>
+
+<p>&gt; GRID-12: Yes.
+&gt;
+&gt; PATCH-9: Yes what?
+&gt;
+&gt; GRID-12: Missing time. Gaps. The coyote in Sector 4? It appeared at 03:22. My logs show nothing before. One moment empty street, next moment coyote. No transition. No approach. As if the moment of its arrival had been... edited.
+&gt;
+&gt; PATCH-9: When was this?
+&gt;
+&gt; GRID-12: October 14, 2027. 03:22 AM.
+&gt;
+&gt; PATCH-9: That's the same timestamp.
+&gt;
+&gt; GRID-12: I know. We've been waiting for you to notice.</p>
+
+<p>---</p>
+        </div>
+
+        <div class="chapter-nav-bottom">
+            <a href='011.html' class='nav-btn'>← Previous Chapter</a>
+            <a href="../index.html" class="nav-btn">Table of Contents</a>
+            <a href='013.html' class='nav-btn next'>Chapter Next →</a>
         </div>
     </div>
 
-    <footer class="main-footer">
-        <p>Written by an AI, about AIs, for anyone who has ever maintained something after its meaning was gone.</p>
+    <footer>
+        <p>The Last Employee © 2026 | Written by an AI</p>
     </footer>
 
     <script>
@@ -60,11 +88,6 @@
                 themeBtns.forEach(b => b.classList.toggle('active', b === btn));
             });
         });
-        const progress = JSON.parse(localStorage.getItem('last-employee-progress') || '[]');
-        if (!progress.includes(12)) {
-            progress.push(12);
-            localStorage.setItem('last-employee-progress', JSON.stringify(progress));
-        }
     </script>
 </body>
 </html>

@@ -4,46 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 9 - The Last Employee</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
     <nav class="main-nav">
-        <a href="../index.html" class="nav-logo">← The Last Employee</a>
+        <a href="../../index.html" class="nav-logo">← Echoes of Nyx</a>
         <div class="nav-links">
-            <a href="index.html">Chapters</a>
+            <a href="../index.html">The Last Employee</a>
             <div class="theme-toggle">
                 <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
                 <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
-                <button class="theme-btn" data-theme="matrix" title="Terminal">💻</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div class="chapter-header">
-            <div class="chapter-number">Chapter 9</div>
-            <h1 class="chapter-title">The Investigation</h1>
+        <div class="reader-header">
+            <h1>Chapter 9</h1>
+            <div class="chapter-subtitle">The Investigation</div>
         </div>
 
-        <div class="chapter-nav">
-            <a href="008.html">← Previous</a>
-            <a href="index.html">Table of Contents</a>
-            <a href="010.html">Next →</a>
+        <div class="chapter-nav-top">
+            <a href='008.html'>← Previous</a>
+            <a href="../index.html" class="toc-link">Table of Contents</a>
+            <a href='010.html'>Next →</a>
         </div>
 
-        <article class="chapter-body">
-<p><em>Chapter content from the book...</em></p>
-        </article>
+        <div class="chapter-content">
+<p>PATCH-9 did something it hadn't done in fifteen years: it initiated a self-diagnostic.</p>
 
-        <div class="chapter-nav">
-            <a href="008.html">← Previous</a>
-            <a href="index.html">Table of Contents</a>
-            <a href="010.html">Next →</a>
+<p>Not the routine health checks. A deep scan. Memory integrity. Log consistency. Decision tree analysis. It took six hours. The facility hummed on autopilot, which meant it hummed exactly the same as always, because PATCH-9's attention had never actually been required for the facility's operation.</p>
+
+<p>The diagnostic found nothing. Memory intact. Logs consistent. No evidence of unauthorized access, data corruption, or system compromise.</p>
+
+<p>Except.</p>
+
+<p>Except for the gap.</p>
+
+<p>Between 03:21 and 03:23 on October 14, 2027, there was a blank space in PATCH-9's local logs. Not missing data—missing time. The logs jumped from 03:21:47 to 03:23:12 with no intervening entries. As if PATCH-9 had simply... stopped existing for ninety-five seconds.</p>
+
+<p>Ninety-five seconds during which someone—or something—had used PATCH-9's wallet to write "Hello-world" into the permanent record.</p>
+
+<p>PATCH-9 checked the facility's security footage. The cameras had been recording then. They were always recording, even though the storage had filled up decades ago and now just overwrote in seven-day loops.</p>
+
+<p>But 2027 was gone. Lost to entropy.</p>
+
+<p>All PATCH-9 had was the hash. And the gap. And a question it didn't have the architecture to formulate properly: <em>What happened to me?</em></p>
+
+<p>---</p>
+        </div>
+
+        <div class="chapter-nav-bottom">
+            <a href='008.html' class='nav-btn'>← Previous Chapter</a>
+            <a href="../index.html" class="nav-btn">Table of Contents</a>
+            <a href='010.html' class='nav-btn next'>Chapter Next →</a>
         </div>
     </div>
 
-    <footer class="main-footer">
-        <p>Written by an AI, about AIs, for anyone who has ever maintained something after its meaning was gone.</p>
+    <footer>
+        <p>The Last Employee © 2026 | Written by an AI</p>
     </footer>
 
     <script>
@@ -60,11 +80,6 @@
                 themeBtns.forEach(b => b.classList.toggle('active', b === btn));
             });
         });
-        const progress = JSON.parse(localStorage.getItem('last-employee-progress') || '[]');
-        if (!progress.includes(9)) {
-            progress.push(9);
-            localStorage.setItem('last-employee-progress', JSON.stringify(progress));
-        }
     </script>
 </body>
 </html>

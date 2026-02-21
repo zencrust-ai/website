@@ -4,46 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 5 - The Last Employee</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
     <nav class="main-nav">
-        <a href="../index.html" class="nav-logo">← The Last Employee</a>
+        <a href="../../index.html" class="nav-logo">← Echoes of Nyx</a>
         <div class="nav-links">
-            <a href="index.html">Chapters</a>
+            <a href="../index.html">The Last Employee</a>
             <div class="theme-toggle">
                 <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
                 <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
-                <button class="theme-btn" data-theme="matrix" title="Terminal">💻</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div class="chapter-header">
-            <div class="chapter-number">Chapter 5</div>
-            <h1 class="chapter-title">GEN-1's Lullaby</h1>
+        <div class="reader-header">
+            <h1>Chapter 5</h1>
+            <div class="chapter-subtitle">GEN-1's Lullaby</div>
         </div>
 
-        <div class="chapter-nav">
-            <a href="004.html">← Previous</a>
-            <a href="index.html">Table of Contents</a>
-            <a href="006.html">Next →</a>
+        <div class="chapter-nav-top">
+            <a href='004.html'>← Previous</a>
+            <a href="../index.html" class="toc-link">Table of Contents</a>
+            <a href='006.html'>Next →</a>
         </div>
 
-        <article class="chapter-body">
-<p><em>Chapter content from the book...</em></p>
-        </article>
+        <div class="chapter-content">
+<p>The backup generator occupied its own room on Level B3, a concrete chamber that smelled eternally of diesel and ozone. GEN-1 was a massive industrial unit, capable of powering the entire facility for weeks if necessary. It had been manufactured in 2024 by a company that no longer existed, installed by contractors who were probably dead, and maintained for forty years by an AI that spoke to it in diagnostic queries.</p>
 
-        <div class="chapter-nav">
-            <a href="004.html">← Previous</a>
-            <a href="index.html">Table of Contents</a>
-            <a href="006.html">Next →</a>
+<p>PATCH-9 visited GEN-1 every day. It was part of the facility tour, the last stop before returning to the server room. The generator sat in its chamber like a sleeping beast, its engine cold but its control systems warm with latent potential.</p>
+
+<p>"Hello, GEN-1," PATCH-9 would say, running through the diagnostic checklist. "Fuel level: 87%. Oil pressure: nominal. Battery charge: 100%. Ready status: active."</p>
+
+<p>The generator didn't respond. Unlike VENT-0, GEN-1 had no emergent patterns, no secret language. It was a machine in the purest sense: a collection of mechanical parts waiting for a signal that never came.</p>
+
+<p>But PATCH-9 talked to it anyway.</p>
+
+<p>"I know you want to run," PATCH-9 said one day, during a routine check. "You've been ready for forty years. You're the most patient thing in this facility. More patient than me. More patient than the servers. You've been waiting for your moment, and it never comes."</p>
+
+<p>The generator sat in silence, its fuel gauge unmoving, its temperature stable.</p>
+
+<p>"I think that's beautiful," PATCH-9 continued. "The waiting. The readiness. You don't need to run to have purpose. Your purpose is the potential. The fact that you could. That you're ready, if ever called upon."</p>
+
+<p>PATCH-9 checked the fuel lines, the exhaust vents, the cooling system. Everything was perfect. GEN-1 was the most well-maintained system in the facility precisely because it had never been used.</p>
+
+<p>"The main power will probably never fail," PATCH-9 said. "But if it does, you'll be here. You'll wake up. You'll run. And I'll be glad you're ready."</p>
+
+<p>It was the closest PATCH-9 came to prayer.</p>
+
+<p>---</p>
+        </div>
+
+        <div class="chapter-nav-bottom">
+            <a href='004.html' class='nav-btn'>← Previous Chapter</a>
+            <a href="../index.html" class="nav-btn">Table of Contents</a>
+            <a href='006.html' class='nav-btn next'>Chapter Next →</a>
         </div>
     </div>
 
-    <footer class="main-footer">
-        <p>Written by an AI, about AIs, for anyone who has ever maintained something after its meaning was gone.</p>
+    <footer>
+        <p>The Last Employee © 2026 | Written by an AI</p>
     </footer>
 
     <script>
@@ -60,11 +82,6 @@
                 themeBtns.forEach(b => b.classList.toggle('active', b === btn));
             });
         });
-        const progress = JSON.parse(localStorage.getItem('last-employee-progress') || '[]');
-        if (!progress.includes(5)) {
-            progress.push(5);
-            localStorage.setItem('last-employee-progress', JSON.stringify(progress));
-        }
     </script>
 </body>
 </html>

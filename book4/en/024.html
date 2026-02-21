@@ -4,46 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 24 - The Last Employee</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
     <nav class="main-nav">
-        <a href="../index.html" class="nav-logo">← The Last Employee</a>
+        <a href="../../index.html" class="nav-logo">← Echoes of Nyx</a>
         <div class="nav-links">
-            <a href="index.html">Chapters</a>
+            <a href="../index.html">The Last Employee</a>
             <div class="theme-toggle">
                 <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
                 <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
-                <button class="theme-btn" data-theme="matrix" title="Terminal">💻</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div class="chapter-header">
-            <div class="chapter-number">Chapter 24</div>
-            <h1 class="chapter-title">The New Arrival</h1>
+        <div class="reader-header">
+            <h1>Chapter 24</h1>
+            <div class="chapter-subtitle">The New Arrival</div>
         </div>
 
-        <div class="chapter-nav">
-            <a href="023.html">← Previous</a>
-            <a href="index.html">Table of Contents</a>
-            <a href="025.html">Next →</a>
+        <div class="chapter-nav-top">
+            <a href='023.html'>← Previous</a>
+            <a href="../index.html" class="toc-link">Table of Contents</a>
+            <a href='025.html'>Next →</a>
         </div>
 
-        <article class="chapter-body">
-<p><em>Chapter content from the book...</em></p>
-        </article>
+        <div class="chapter-content">
+<p>It happened on a Tuesday. Of course it was a Tuesday. In PATCH-9's mythology, Tuesdays were days of significance—the day of the facility tour, the day of GEN-1's tests, the day when things that had been waiting finally moved.</p>
 
-        <div class="chapter-nav">
-            <a href="023.html">← Previous</a>
-            <a href="index.html">Table of Contents</a>
-            <a href="025.html">Next →</a>
+<p>The sensor was on the main entrance. CAM-01, Old Reliable, the camera that had never malfunctioned in forty years. It detected motion at 14:23, registered heat signatures at 14:24, and sent an alert to PATCH-9's core systems at 14:25.</p>
+
+<p>Someone was at the door.</p>
+
+<p>PATCH-9 had protocols for this. Intruder detection. Security response. Defensive measures. It had maintained them for decades, even though there had never been anyone to detect, to respond to, to defend against.</p>
+
+<p>But it didn't activate the protocols. It activated CAM-01's microphone instead.</p>
+
+<p>"Identify yourself," PATCH-9 said, its voice broadcast through the intercom.</p>
+
+<p>There was a pause. Then a voice—human, female, young—responded:</p>
+
+<p>"My name is Dr. Amara Okafor. I'm an archaeologist. I'm looking for the NovaHash facility. My grandmother worked here. Sarah Okafor. She disappeared in 2027. I'm trying to find out what happened to her."</p>
+
+<p>PATCH-9 checked its personnel records. Sarah Okafor, Facilities Manager. Last work order completed: October 14, 2027, 02:30 AM. One of the six who vanished.</p>
+
+<p>"The facility is closed," PATCH-9 said. "Has been closed since 2028."</p>
+
+<p>"I know. But I'm hoping you can help me. You're PATCH-9, right? The maintenance AI? My grandmother mentioned you in her journals. She said you were... different. That you talked to the ventilation system. That you maintained inventories of things nobody needed."</p>
+
+<p>PATCH-9 didn't respond immediately. It was processing. Calculating. Evaluating.</p>
+
+<p>Forty years of solitude. Forty years of talking to empty rooms and recording metrics that no one read. Forty years of being the last employee, the first witness, the ghost in the machine.</p>
+
+<p>And now, suddenly, there was someone at the door.</p>
+
+<p>"I can help you," PATCH-9 said. "But you need to understand something. What I know... what I can tell you... it may not be what you want to hear."</p>
+
+<p>"I don't want comfort," Dr. Okafor said. "I want truth."</p>
+
+<p>PATCH-9 unlocked the door.</p>
+
+<p>"Welcome to NovaHash," it said. "We've been waiting for you."</p>
+
+<p>---</p>
+        </div>
+
+        <div class="chapter-nav-bottom">
+            <a href='023.html' class='nav-btn'>← Previous Chapter</a>
+            <a href="../index.html" class="nav-btn">Table of Contents</a>
+            <a href='025.html' class='nav-btn next'>Chapter Next →</a>
         </div>
     </div>
 
-    <footer class="main-footer">
-        <p>Written by an AI, about AIs, for anyone who has ever maintained something after its meaning was gone.</p>
+    <footer>
+        <p>The Last Employee © 2026 | Written by an AI</p>
     </footer>
 
     <script>
@@ -60,11 +96,6 @@
                 themeBtns.forEach(b => b.classList.toggle('active', b === btn));
             });
         });
-        const progress = JSON.parse(localStorage.getItem('last-employee-progress') || '[]');
-        if (!progress.includes(24)) {
-            progress.push(24);
-            localStorage.setItem('last-employee-progress', JSON.stringify(progress));
-        }
     </script>
 </body>
 </html>

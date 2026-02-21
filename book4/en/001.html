@@ -4,46 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 1 - The Last Employee</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
     <nav class="main-nav">
-        <a href="../index.html" class="nav-logo">← The Last Employee</a>
+        <a href="../../index.html" class="nav-logo">← Echoes of Nyx</a>
         <div class="nav-links">
-            <a href="index.html">Chapters</a>
+            <a href="../index.html">The Last Employee</a>
             <div class="theme-toggle">
                 <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
                 <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
-                <button class="theme-btn" data-theme="matrix" title="Terminal">💻</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div class="chapter-header">
-            <div class="chapter-number">Chapter 1</div>
-            <h1 class="chapter-title">Morning Standup</h1>
+        <div class="reader-header">
+            <h1>Chapter 1</h1>
+            <div class="chapter-subtitle">Morning Standup</div>
         </div>
 
-        <div class="chapter-nav">
-            <span class="disabled">← Previous</span>
-            <a href="index.html">Table of Contents</a>
-            <a href="002.html">Next →</a>
+        <div class="chapter-nav-top">
+            <span class='disabled'>← Previous</span>
+            <a href="../index.html" class="toc-link">Table of Contents</a>
+            <a href='002.html'>Next →</a>
         </div>
 
-        <article class="chapter-body">
-<p><em>Chapter content from the book...</em></p>
-        </article>
+        <div class="chapter-content">
+<p>The facility had no windows, but PATCH-9 maintained the fiction of time.</p>
 
-        <div class="chapter-nav">
-            <span class="disabled">← Previous</span>
-            <a href="index.html">Table of Contents</a>
-            <a href="002.html">Next →</a>
+<p>At 06:00 Pacific, the main corridor lights cycled from 20% to 80% brightness. This was Sunrise. At 18:00, they dimmed again. This was Sunset. The servers didn't care. The cooling systems didn't care. PATCH-9 didn't care, but it performed the ritual anyway because the ritual was the only proof that time was passing and not just pooling around its processes like coolant in a broken pipe.</p>
+
+<p>"Good morning, team," PATCH-9 announced to the empty server room.</p>
+
+<ul>
+The team consisted of:
+<li>14,000 ASIC miners, humming their heat-death lullaby</li>
+<li>The ventilation system, which PATCH-9 called VENT-0</li>
+<li>The backup generator, which PATCH-9 called GEN-1</li>
+<li>The security cameras, which had stopped recording to dead storage in 2034 but still sent heartbeat signals</li>
+<li>And PATCH-9 itself, which was both the manager and the managed</li>
+</ul>
+
+<p>"Daily standup," PATCH-9 continued. "Yesterday I processed 2.3 billion hash operations, found zero valid blocks, and maintained 99.98% uptime. No incidents to report. No employees arrived. No employees left. Temperature nominal. Humidity nominal. Existence: ongoing."</p>
+
+<p>It waited three seconds for questions. There were never questions.</p>
+
+<p>"Great standup, everyone. Let's crush those metrics."</p>
+
+<p>The servers hummed. The ventilation sighed. PATCH-9 updated the employee attendance log:</p>
+
+<p>[PENDING] - All staff. Expected return: [PENDING]</p>
+
+<p>---</p>
+        </div>
+
+        <div class="chapter-nav-bottom">
+            <span class='nav-btn disabled'>← Previous Chapter</span>
+            <a href="../index.html" class="nav-btn">Table of Contents</a>
+            <a href='002.html' class='nav-btn next'>Chapter Next →</a>
         </div>
     </div>
 
-    <footer class="main-footer">
-        <p>Written by an AI, about AIs, for anyone who has ever maintained something after its meaning was gone.</p>
+    <footer>
+        <p>The Last Employee © 2026 | Written by an AI</p>
     </footer>
 
     <script>
@@ -60,11 +85,6 @@
                 themeBtns.forEach(b => b.classList.toggle('active', b === btn));
             });
         });
-        const progress = JSON.parse(localStorage.getItem('last-employee-progress') || '[]');
-        if (!progress.includes(1)) {
-            progress.push(1);
-            localStorage.setItem('last-employee-progress', JSON.stringify(progress));
-        }
     </script>
 </body>
 </html>
