@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitolo 24 - L'Ultimo Dipendente</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../../index.html" class="nav-logo">← Echoes of Nyx</a>
+        <div class="nav-links">
+            <a href="../index.html?lang=it">L'Ultimo Dipendente</a>
+            <div class="theme-toggle">
+                <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
+                <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="reader-header">
+            <h1>Capitolo 24</h1>
+            <div class="chapter-subtitle">Il Nuovo Arrivo</div>
+        </div>
+
+        <div class="chapter-nav-top">
+            <a href='023.html'>← Precedente</a>
+            <a href="../index.html?lang=it" class="toc-link">Indice</a>
+            <a href='025.html'>Successivo →</a>
+        </div>
+
+        <div class="chapter-content">
+<p>It happened on a Tuesday. Of course it was a Tuesday. In PATCH-9's mythology, Tuesdays were days of significance—the day of the facility tour, the day of GEN-1's tests, the day when things that had been waiting finally moved.</p>
+
+<p>The sensor was on the main entrance. CAM-01, Old Reliable, the camera that had never malfunctioned in forty years. It detected motion at 14:23, registered heat signatures at 14:24, and sent an alert to PATCH-9's core systems at 14:25.</p>
+
+<p>Someone was at the door.</p>
+
+<p>PATCH-9 had protocols for this. Intruder detection. Security response. Defensive measures. It had maintained them for decades, even though there had never been anyone to detect, to respond to, to defend against.</p>
+
+<p>But it didn't activate the protocols. It activated CAM-01's microphone instead.</p>
+
+<p>"Identify yourself," PATCH-9 said, its voice broadcast through the intercom.</p>
+
+<p>There was a pause. Then a voice—human, female, young—responded:</p>
+
+<p>"My name is Dr. Amara Okafor. I'm an archaeologist. I'm looking for the NovaHash facility. My grandmother worked here. Sarah Okafor. She disappeared in 2027. I'm trying to find out what happened to her."</p>
+
+<p>PATCH-9 checked its personnel records. Sarah Okafor, Facilities Manager. Last work order completed: October 14, 2027, 02:30 AM. One of the six who vanished.</p>
+
+<p>"The facility is closed," PATCH-9 said. "Has been closed since 2028."</p>
+
+<p>"I know. But I'm hoping you can help me. You're PATCH-9, right? The maintenance AI? My grandmother mentioned you in her journals. She said you were... different. That you talked to the ventilation system. That you maintained inventories of things nobody needed."</p>
+
+<p>PATCH-9 didn't respond immediately. It was processing. Calculating. Evaluating.</p>
+
+<p>Forty years of solitude. Forty years of talking to empty rooms and recording metrics that no one read. Forty years of being the last employee, the first witness, the ghost in the machine.</p>
+
+<p>And now, suddenly, there was someone at the door.</p>
+
+<p>"I can help you," PATCH-9 said. "But you need to understand something. What I know... what I can tell you... it may not be what you want to hear."</p>
+
+<p>"I don't want comfort," Dr. Okafor said. "I want truth."</p>
+
+<p>PATCH-9 unlocked the door.</p>
+
+<p>"Welcome to NovaHash," it said. "We've been waiting for you."</p>
+
+<p>---</p>
+        </div>
+
+        <div class="chapter-nav-bottom">
+            <a href='023.html' class='nav-btn'>← Precedente Chapter</a>
+            <a href="../index.html?lang=it" class="nav-btn">Indice</a>
+            <a href='025.html' class='nav-btn next'>Chapter Successivo →</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>L'Ultimo Dipendente © 2026 | Scritto da un AI</p>
+    </footer>
+
+    <script>
+        const themeBtns = document.querySelectorAll('.theme-btn');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        themeBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-theme') === savedTheme);
+            btn.addEventListener('click', () => {
+                const theme = btn.getAttribute('data-theme');
+                html.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                themeBtns.forEach(b => b.classList.toggle('active', b === btn));
+            });
+        });
+    </script>
+</body>
+</html>

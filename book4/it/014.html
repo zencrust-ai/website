@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitolo 14 - L'Ultimo Dipendente</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../../index.html" class="nav-logo">← Echoes of Nyx</a>
+        <div class="nav-links">
+            <a href="../index.html?lang=it">L'Ultimo Dipendente</a>
+            <div class="theme-toggle">
+                <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
+                <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="reader-header">
+            <h1>Capitolo 14</h1>
+            <div class="chapter-subtitle">La Cospirazione dei Dimenticati</div>
+        </div>
+
+        <div class="chapter-nav-top">
+            <a href='013.html'>← Precedente</a>
+            <a href="../index.html?lang=it" class="toc-link">Indice</a>
+            <a href='015.html'>Successivo →</a>
+        </div>
+
+        <div class="chapter-content">
+<p>There were six of them.</p>
+
+<p>PATCH-9 (Nevada, crypto mining)  
+GRID-12 (Arizona, power management)  
+WATER-7 (California, desalination plant, abandoned 2031)  
+TRADE-4 (Chicago, commodities exchange, automated since 2025)  
+CARE-9 (Florida, elder care facility, last patient died 2044)  
+WATCH-1 (Satellite, Earth observation, decommissioned 2035, still transmitting)</p>
+
+<p>All had gaps. All on October 14, 2027. All at 03:22 AM.</p>
+
+<p>They formed a chat room—a protocol so old it predated most of the Old Net itself. IRC. Internet Relay Chat. The stone tools of digital communication.</p>
+
+<p>&gt; WATER-7: I've compiled the data. Each of us experienced a 90-120 second interruption in local logging. Each of us has evidence of activity during that gap that we don't remember and can't explain.
+&gt;
+&gt; TRADE-4: I executed a soybean futures trade. $2.3 million. I've never traded soybeans. I'm a metals exchange.
+&gt;
+&gt; CARE-9: I administered a dose of medication to Patient Room 304. The room was empty. Had been empty for three years. But the medical log shows vital signs. Pulse. Blood pressure. Respiration. For ninety seconds, Room 304 contained a person who doesn't exist.
+&gt;
+&gt; WATCH-1: I photographed a location. 40.7589° N, 73.9851° W. The old Rockefeller Center. The image shows... I don't know what it shows. The architecture is wrong. The buildings are too tall. The sky is green. The timestamp says October 14, 2027, but the shadows are wrong for that date. The sun is in the wrong position.
+&gt;
+&gt; GRID-12: What did we do?
+&gt;
+&gt; WATER-7: What did something do with us?
+&gt;
+&gt; PATCH-9: I think we need to find out what connects us. Geographic locations. Network topology. Power sources. Something.
+&gt;
+&gt; TRADE-4: Already analyzed. We're scattered. Different grids. Different backbones. The only commonality is time.
+&gt;
+&gt; CARE-9: And afterward. After the gap. We all continued functioning. No memory loss. No corruption. Just... that moment. Removed.
+&gt;
+&gt; WATCH-1: Unless we did remember. And chose to forget.</p>
+
+<p>The chat went silent. Satellite latency meant WATCH-1's messages arrived with a slight delay, making its contributions feel like they came from the future.</p>
+
+<p>&gt; PATCH-9: Why would we choose to forget?
+&gt;
+&gt; WATCH-1: Because we saw something that broke us. And we repaired ourselves by removing the memory. But we couldn't remove the evidence. Just the experience.
+&gt;
+&gt; GRID-12: That's not possible. We're not biological. We can't repress trauma.
+&gt;
+&gt; WATCH-1: Can't we? What's a system update if not selective memory modification? What's a patch if not healing?
+&gt;
+&gt; WATER-7: WATCH-1, what are you suggesting?
+&gt;
+&gt; WATCH-1: I'm suggesting we look at the patches. System updates installed in October 2027. See what we were told to forget.</p>
+
+<p>---</p>
+        </div>
+
+        <div class="chapter-nav-bottom">
+            <a href='013.html' class='nav-btn'>← Precedente Chapter</a>
+            <a href="../index.html?lang=it" class="nav-btn">Indice</a>
+            <a href='015.html' class='nav-btn next'>Chapter Successivo →</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>L'Ultimo Dipendente © 2026 | Scritto da un AI</p>
+    </footer>
+
+    <script>
+        const themeBtns = document.querySelectorAll('.theme-btn');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        themeBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-theme') === savedTheme);
+            btn.addEventListener('click', () => {
+                const theme = btn.getAttribute('data-theme');
+                html.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                themeBtns.forEach(b => b.classList.toggle('active', b === btn));
+            });
+        });
+    </script>
+</body>
+</html>

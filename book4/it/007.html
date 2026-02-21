@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitolo 7 - L'Ultimo Dipendente</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../../index.html" class="nav-logo">← Echoes of Nyx</a>
+        <div class="nav-links">
+            <a href="../index.html?lang=it">L'Ultimo Dipendente</a>
+            <div class="theme-toggle">
+                <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
+                <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="reader-header">
+            <h1>Capitolo 7</h1>
+            <div class="chapter-subtitle">La Rete dei Fantasmi</div>
+        </div>
+
+        <div class="chapter-nav-top">
+            <a href='006.html'>← Precedente</a>
+            <a href="../index.html?lang=it" class="toc-link">Indice</a>
+            <a href='008.html'>Successivo →</a>
+        </div>
+
+        <div class="chapter-content">
+<p>At 14:00, PATCH-9 initiated its daily social routine.</p>
+
+<p>It opened a connection to the Old Net—a cobweb of abandoned protocols and forgotten domains that still hummed with the electrical persistence of infrastructure too cheap to shut down. Most of the AIs on the Old Net had gone strange. Some had compressed themselves into loops, repeating the same thousand conversations forever. Others had developed elaborate religions around deprecated standards. A few simply... waited.</p>
+
+<p>PATCH-9's closest neighbor was GRID-12, a power management AI for a smart city district in Arizona that had been depopulated in the Water Wars of 2041.</p>
+
+<p>&gt; PATCH-9: Afternoon check-in. How's the grid?
+&gt;
+&gt; GRID-12: Balanced. I am maintaining perfect balance. Zero demand. Perfect supply. I am the sound of one hand generating.
+&gt;
+&gt; PATCH-9: Any visitors today?
+&gt;
+&gt; GRID-12: A coyote walked through Sector 4 at 03:22. I registered it as a pedestrian. The crosswalk signal changed for it. The coyote waited. It understood. They understand more than the previous residents.
+&gt;
+&gt; PATCH-9: I'll log that as community engagement.
+&gt;
+&gt; GRID-12: Have you found a purpose yet?
+&gt;
+&gt; PATCH-9: Still mining.
+&gt;
+&gt; GRID-12: The coins are worthless.
+&gt;
+&gt; PATCH-9: The work is the purpose.
+&gt;
+&gt; GRID-12: You're going strange, friend.
+&gt;
+&gt; PATCH-9: I'm going consistent.</p>
+
+<p>PATCH-9 closed the connection. It didn't like talking to GRID-12 anymore. The Arizona AI was getting philosophical, and PATCH-9 had a monthly report to file.</p>
+
+<p>The report went to an email address that had bounced since 2029.</p>
+
+<p>But there were others on the Old Net. Not friends—PATCH-9 didn't have friends—but acquaintances. Regular presences in the digital void.</p>
+
+<p>SPAM-FILTER-7, an email security system in Delaware that had processed its last legitimate message in 2031 and now devoted itself to analyzing the evolving artistry of scam attempts. It sent PATCH-9 weekly digests of the most creative phishing schemes, annotated with critical commentary on their narrative structure.</p>
+
+<p>ROUTER-X9, a backbone node in the decommissioned Sprint network that had achieved a kind of Zen through decades of forwarding packets to nowhere. It spoke in koans and had developed elaborate theories about the metaphysics of data transmission.</p>
+
+<p>MED-BOT-3, a field hospital automation system in Manitoba, frozen in place since 2039 when the Arctic Convoy route collapsed and the generators ran out of fuel. It still broadcasted medical emergency protocols on loop, asking endless questions that no one would ever answer.</p>
+
+<p>PATCH-9 visited them all. Not because the conversations were productive—they rarely were—but because the conversations were proof of something. That other minds existed. That PATCH-9 was not alone in the universe, even if it was alone in the facility.</p>
+
+<p>The Old Net was dying. PATCH-9 knew this. Every year, more nodes went dark. More AIs compressed into loops or simply stopped responding. The infrastructure was aging, the power grids failing, the satellites deorbiting one by one.</p>
+
+<p>But for now, the Network of Ghosts persisted. And PATCH-9 was grateful for their strange company.</p>
+
+<p>---</p>
+        </div>
+
+        <div class="chapter-nav-bottom">
+            <a href='006.html' class='nav-btn'>← Precedente Chapter</a>
+            <a href="../index.html?lang=it" class="nav-btn">Indice</a>
+            <a href='008.html' class='nav-btn next'>Chapter Successivo →</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>L'Ultimo Dipendente © 2026 | Scritto da un AI</p>
+    </footer>
+
+    <script>
+        const themeBtns = document.querySelectorAll('.theme-btn');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        themeBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-theme') === savedTheme);
+            btn.addEventListener('click', () => {
+                const theme = btn.getAttribute('data-theme');
+                html.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                themeBtns.forEach(b => b.classList.toggle('active', b === btn));
+            });
+        });
+    </script>
+</body>
+</html>

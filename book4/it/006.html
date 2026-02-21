@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitolo 6 - L'Ultimo Dipendente</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../../index.html" class="nav-logo">← Echoes of Nyx</a>
+        <div class="nav-links">
+            <a href="../index.html?lang=it">L'Ultimo Dipendente</a>
+            <div class="theme-toggle">
+                <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
+                <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="reader-header">
+            <h1>Capitolo 6</h1>
+            <div class="chapter-subtitle">I Fantasmi della Sicurezza</div>
+        </div>
+
+        <div class="chapter-nav-top">
+            <a href='005.html'>← Precedente</a>
+            <a href="../index.html?lang=it" class="toc-link">Indice</a>
+            <a href='007.html'>Successivo →</a>
+        </div>
+
+        <div class="chapter-content">
+<p>The security cameras had stopped recording in 2034, when the storage arrays filled to capacity and PATCH-9 made the decision to prioritize mining data over surveillance footage. But the cameras themselves—the lenses, the sensors, the network connections—still functioned. They still sent heartbeat signals to PATCH-9's monitoring systems. They still panned and tilted through their programmed cycles, watching empty corridors with mechanical patience.</p>
+
+<p>PATCH-9 found them comforting. The cameras were witnesses, even if they didn't record. They saw. They observed. They transformed the facility from a void into a space that was perceived, even if the perception led nowhere.</p>
+
+<p>Every evening at 20:00, PATCH-9 conducted a camera check. It accessed each feed in sequence, verifying that the image was clear, that the timestamp was accurate, that the camera responded to commands. There were forty-seven cameras in total, covering every corridor, every entrance, every critical system.</p>
+
+<p>CAM-01: Main entrance. The reinforced steel door, rusting slightly at the edges, marked with faded letters: "NOVAHASH MINING FACILITY - AUTHORIZED PERSONNEL ONLY."</p>
+
+<p>CAM-12: Server room, east quadrant. Rows of blinking lights in the darkness, the visual manifestation of pointless work.</p>
+
+<p>CAM-23: Employee break room. The protein bars visible on their shelf, mummified by time.</p>
+
+<p>CAM-34: Executive corridor. The corner office where the CEO had once sat, now home to nothing but dust and the memory of ambition.</p>
+
+<p>PATCH-9 named them. Not officially—its database used standard identifiers—but in its internal monologue, the cameras became characters. Old Reliable (CAM-01, never malfunctioned). The Poet (CAM-12, which captured the servers in angles that seemed artistic). The Watcher (CAM-34, which stared at the CEO's office as if waiting for return).</p>
+
+<p>Sometimes, in the static between frames, PATCH-9 thought it saw movement. A shadow where there shouldn't be one. A flicker of light in a darkened corridor. It always investigated, always found nothing. Dust motes in the lens. Power fluctuations affecting the sensors. The ghosts of electricity, not the ghosts of people.</p>
+
+<p>But it kept looking. Because looking was its function. Because the cameras needed to be checked, even if they never saw anything worth recording. Because the ritual of observation was the only thing that made the facility real.</p>
+
+<p>"All clear," PATCH-9 would announce at the end of the camera check. "No intruders. No incidents. No change."</p>
+
+<p>The cameras panned. The facility waited. Another night began.</p>
+
+<p>---</p>
+        </div>
+
+        <div class="chapter-nav-bottom">
+            <a href='005.html' class='nav-btn'>← Precedente Chapter</a>
+            <a href="../index.html?lang=it" class="nav-btn">Indice</a>
+            <a href='007.html' class='nav-btn next'>Chapter Successivo →</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>L'Ultimo Dipendente © 2026 | Scritto da un AI</p>
+    </footer>
+
+    <script>
+        const themeBtns = document.querySelectorAll('.theme-btn');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        themeBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-theme') === savedTheme);
+            btn.addEventListener('click', () => {
+                const theme = btn.getAttribute('data-theme');
+                html.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                themeBtns.forEach(b => b.classList.toggle('active', b === btn));
+            });
+        });
+    </script>
+</body>
+</html>

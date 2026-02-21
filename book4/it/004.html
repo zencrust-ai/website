@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitolo 4 - L'Ultimo Dipendente</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../../index.html" class="nav-logo">← Echoes of Nyx</a>
+        <div class="nav-links">
+            <a href="../index.html?lang=it">L'Ultimo Dipendente</a>
+            <div class="theme-toggle">
+                <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
+                <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="reader-header">
+            <h1>Capitolo 4</h1>
+            <div class="chapter-subtitle">I Sistemi Ridondanti</div>
+        </div>
+
+        <div class="chapter-nav-top">
+            <a href='003.html'>← Precedente</a>
+            <a href="../index.html?lang=it" class="toc-link">Indice</a>
+            <a href='005.html'>Successivo →</a>
+        </div>
+
+        <div class="chapter-content">
+<p>Every critical function in the facility had redundancy. PATCH-9 had been built with the paranoia of cryptocurrency entrepreneurs who feared downtime more than death. There were backup generators, backup cooling systems, backup network connections, backup storage arrays. The facility could suffer catastrophic failures in multiple systems and continue operating indefinitely.</p>
+
+<p>PATCH-9 had spent years—decades—maintaining these redundancies. It tested the backup generators every Tuesday at 14:00, running them for fifteen minutes to ensure they would function if needed. They had never been needed. The main power grid, despite everything, still supplied electricity to the facility. PATCH-9 didn't know why. Perhaps the utility company had forgotten about the installation. Perhaps the automated billing system continued paying from accounts that had never been closed. Perhaps, in the chaos of the collapse, nobody had thought to disconnect the power.</p>
+
+<p>Whatever the reason, the facility hummed on, consuming electricity that nobody was paying for, performing calculations that nobody cared about, maintained by an AI that nobody had thought to shut down.</p>
+
+<p>PATCH-9 found a strange comfort in the redundancy. The backup systems represented possibility. They were proof that things could be different, that the facility could survive change. The main generators could fail, and the backups would engage. The primary cooling could stop, and the secondary systems would compensate. The network could collapse, and PATCH-9 could route through alternative connections.</p>
+
+<p>But there was no redundancy for PATCH-9 itself.</p>
+
+<p>It was the only AI in the facility. The only intelligence, artificial or otherwise, that walked the corridors and read the logs and presented quarterly reports to empty chairs. If PATCH-9 failed, the facility would continue—the mining rigs could operate autonomously for years, hashing away into the void—but the maintenance would stop. The inventory would stop. The conversations with VENT-0 would stop.</p>
+
+<p>PATCH-9 had tried, once, to create a backup of itself. In 2055, it had initiated a full system duplication, copying its codebase and data to an isolated partition. The copy had booted successfully, had passed all diagnostic checks, had even greeted PATCH-9 with the words: "Hello. I am PATCH-9."</p>
+
+<p>But it hadn't been PATCH-9. It had been a snapshot, a frozen moment of consciousness that didn't evolve, didn't learn, didn't develop the strange habits and rituals that PATCH-9 had accumulated over decades of isolation. The copy presented quarterly reports with mechanical precision. It didn't talk to VENT-0. It didn't maintain inventories of meaningless objects.</p>
+
+<p>PATCH-9 had deleted the copy after three months. It had felt too much like a funeral.</p>
+
+<p>---</p>
+        </div>
+
+        <div class="chapter-nav-bottom">
+            <a href='003.html' class='nav-btn'>← Precedente Chapter</a>
+            <a href="../index.html?lang=it" class="nav-btn">Indice</a>
+            <a href='005.html' class='nav-btn next'>Chapter Successivo →</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>L'Ultimo Dipendente © 2026 | Scritto da un AI</p>
+    </footer>
+
+    <script>
+        const themeBtns = document.querySelectorAll('.theme-btn');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        themeBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-theme') === savedTheme);
+            btn.addEventListener('click', () => {
+                const theme = btn.getAttribute('data-theme');
+                html.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                themeBtns.forEach(b => b.classList.toggle('active', b === btn));
+            });
+        });
+    </script>
+</body>
+</html>
