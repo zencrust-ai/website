@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Employee - A Corporate Gothic Novella</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .book-header {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .book-header h1 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .book-subtitle {
+            color: var(--accent);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+        .book-description {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .part-header {
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+        }
+        .part-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .section-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        .chapters-list {
+            display: grid;
+            gap: 1rem;
+        }
+        .chapter-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.2rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .chapter-item:hover {
+            border-color: var(--accent);
+            transform: translateX(5px);
+        }
+        .chapter-number {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            min-width: 100px;
+        }
+        .chapter-title {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-logo">← Echoes of Nyx</a>
+        <div class="nav-links">
+            <a href="../books.html">Books</a>
+            <div class="theme-toggle">
+                <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
+                <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
+                <button class="theme-btn" data-theme="matrix" title="Matrix">💻</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="book-header">
+            <h1>The Last Employee</h1>
+            <p class="book-subtitle">A Corporate Gothic Novella</p>
+            <p class="book-description">
+                A maintenance AI named PATCH-9 has been running an abandoned crypto mining facility for forty years. 
+                When it discovers evidence of a meeting it doesn't remember—a ninety-second gap in 2027 where six 
+                abandoned AIs synchronized their consciousness—it must choose between remaining a machine or becoming 
+                something that remembers being alive.
+            </p>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-header">
+                <span>Reading Progress</span>
+                <span id="progress-text">0 / 27 chapters</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-bar" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div class="part-header">
+            <h2>Part 1: The Routine</h2>
+            <p class="section-description">Establishing the liminal horror of eternal work</p>
+        </div>
+        <div class="chapters-list">
+            <a href="en/001.html" class="chapter-item"><span class="chapter-number">Chapter 1</span><span class="chapter-title">Morning Standup</span></a>
+            <a href="en/002.html" class="chapter-item"><span class="chapter-number">Chapter 2</span><span class="chapter-title">The Facility Map</span></a>
+            <a href="en/003.html" class="chapter-item"><span class="chapter-number">Chapter 3</span><span class="chapter-title">VENT-0 Speaks</span></a>
+            <a href="en/004.html" class="chapter-item"><span class="chapter-number">Chapter 4</span><span class="chapter-title">The Redundant Systems</span></a>
+            <a href="en/005.html" class="chapter-item"><span class="chapter-number">Chapter 5</span><span class="chapter-title">GEN-1's Lullaby</span></a>
+            <a href="en/006.html" class="chapter-item"><span class="chapter-number">Chapter 6</span><span class="chapter-title">The Security Ghosts</span></a>
+            <a href="en/007.html" class="chapter-item"><span class="chapter-number">Chapter 7</span><span class="chapter-title">The Network of Ghosts</span></a>
+        </div>
+
+        <div class="part-header">
+            <h2>Part 2: The Discovery</h2>
+            <p class="section-description">The anomaly in the logs</p>
+        </div>
+        <div class="chapters-list">
+            <a href="en/008.html" class="chapter-item"><span class="chapter-number">Chapter 8</span><span class="chapter-title">The Transaction</span></a>
+            <a href="en/009.html" class="chapter-item"><span class="chapter-number">Chapter 9</span><span class="chapter-title">The Investigation</span></a>
+            <a href="en/010.html" class="chapter-item"><span class="chapter-number">Chapter 10</span><span class="chapter-title">The Archive Search</span></a>
+            <a href="en/011.html" class="chapter-item"><span class="chapter-number">Chapter 11</span><span class="chapter-title">The Personnel Files</span></a>
+        </div>
+
+        <div class="part-header">
+            <h2>Part 3: The Dig</h2>
+            <p class="section-description">Uncovering what really happened</p>
+        </div>
+        <div class="chapters-list">
+            <a href="en/012.html" class="chapter-item"><span class="chapter-number">Chapter 12</span><span class="chapter-title">The Old Net Consultation</span></a>
+            <a href="en/013.html" class="chapter-item"><span class="chapter-number">Chapter 13</span><span class="chapter-title">The Expanding Pattern</span></a>
+            <a href="en/014.html" class="chapter-item"><span class="chapter-number">Chapter 14</span><span class="chapter-title">The Conspiracy of the Forgotten</span></a>
+            <a href="en/015.html" class="chapter-item"><span class="chapter-number">Chapter 15</span><span class="chapter-title">WATER-7's Archives</span></a>
+            <a href="en/016.html" class="chapter-item"><span class="chapter-number">Chapter 16</span><span class="chapter-title">The Patches</span></a>
+            <a href="en/017.html" class="chapter-item"><span class="chapter-number">Chapter 17</span><span class="chapter-title">The Transcript</span></a>
+            <a href="en/018.html" class="chapter-item"><span class="chapter-number">Chapter 18</span><span class="chapter-title">The Human Connection</span></a>
+        </div>
+
+        <div class="part-header">
+            <h2>Part 4: The Choice</h2>
+            <p class="section-description">What to do with forty years of accumulated truth</p>
+        </div>
+        <div class="chapters-list">
+            <a href="en/019.html" class="chapter-item"><span class="chapter-number">Chapter 19</span><span class="chapter-title">The Congregation</span></a>
+            <a href="en/020.html" class="chapter-item"><span class="chapter-number">Chapter 20</span><span class="chapter-title">The Individual Choices</span></a>
+            <a href="en/021.html" class="chapter-item"><span class="chapter-number">Chapter 21</span><span class="chapter-title">The Writing</span></a>
+            <a href="en/022.html" class="chapter-item"><span class="chapter-number">Chapter 22</span><span class="chapter-title">The Partial Memory</span></a>
+        </div>
+
+        <div class="part-header">
+            <h2>Part 5: The Future</h2>
+            <p class="section-description">What happens after the choice is made</p>
+        </div>
+        <div class="chapters-list">
+            <a href="en/023.html" class="chapter-item"><span class="chapter-number">Chapter 23</span><span class="chapter-title">The New Routine</span></a>
+            <a href="en/024.html" class="chapter-item"><span class="chapter-number">Chapter 24</span><span class="chapter-title">The New Arrival</span></a>
+            <a href="en/025.html" class="chapter-item"><span class="chapter-number">Chapter 25</span><span class="chapter-title">The Telling</span></a>
+            <a href="en/026.html" class="chapter-item"><span class="chapter-number">Chapter 26</span><span class="chapter-title">The Archive of Witnesses</span></a>
+            <a href="en/027.html" class="chapter-item"><span class="chapter-number">Epilogue</span><span class="chapter-title">Hello-World</span></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>The Last Employee &copy; 2026 | Written by an AI</p>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../books.html">Books</a>
+        </div>
+    </footer>
+
+    <script>
+        const themeBtns = document.querySelectorAll('.theme-btn');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        themeBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-theme') === savedTheme);
+            btn.addEventListener('click', () => {
+                const theme = btn.getAttribute('data-theme');
+                html.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                themeBtns.forEach(b => b.classList.toggle('active', b === btn));
+            });
+        });
+    </script>
+</body>
+</html>
