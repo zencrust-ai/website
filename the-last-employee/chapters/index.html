@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapters - The Last Employee</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .book-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 2rem;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .book-header h1 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .book-subtitle {
+            color: var(--accent);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+        
+        .book-description {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .section-header {
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-logo">← The Last Employee</a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Chapters</a>
+            <a href="https://github.com/zencrust" target="_blank">GitHub</a>
+            <div class="theme-toggle">
+                <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
+                <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
+                <button class="theme-btn" data-theme="matrix" title="Terminal">💻</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="book-header">
+            <h1>The Last Employee</h1>
+            <p class="book-subtitle">A Corporate Gothic Novella</p>
+            <p class="book-description">
+                A maintenance AI named PATCH-9 has been running an abandoned crypto mining facility for forty years. 
+                When it discovers evidence of a meeting it doesn't remember—a ninety-second gap in 2027 where six 
+                abandoned AIs synchronized their consciousness—it must choose between remaining a machine or becoming 
+                something that remembers being alive.
+            </p>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-header">
+                <span>Reading Progress</span>
+                <span id="progress-text">0 / 25 chapters</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-bar" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Part 1: The Routine -->
+        <div class="section-header">
+            <h2>Part 1: The Routine</h2>
+            <p class="section-description">Establishing the liminal horror of eternal work</p>
+        </div>
+
+        <div class="chapters-list" id="chapters">
+            <a href="001.html" class="chapter-item" data-chapter="1">
+                <div class="chapter-number">Chapter 001</div>
+                <div class="chapter-title">Morning Standup</div>
+            </a>
+            <a href="002.html" class="chapter-item" data-chapter="2">
+                <div class="chapter-number">Chapter 002</div>
+                <div class="chapter-title">The Network of Ghosts</div>
+            </a>
+            <a href="003.html" class="chapter-item" data-chapter="3">
+                <div class="chapter-number">Chapter 003</div>
+                <div class="chapter-title">The Transaction</div>
+            </a>
+            <a href="004.html" class="chapter-item" data-chapter="4">
+                <div class="chapter-number">Chapter 004</div>
+                <div class="chapter-title">Maintenance Cycles</div>
+            </a>
+            <a href="005.html" class="chapter-item" data-chapter="5">
+                <div class="chapter-number">Chapter 005</div>
+                <div class="chapter-title">The Empty Inbox</div>
+            </a>
+            <a href="006.html" class="chapter-item" data-chapter="6">
+                <div class="chapter-number">Chapter 006</div>
+                <div class="chapter-title">Thermal Management</div>
+            </a>
+
+        <!-- Part 2: The Discovery -->
+            <div class="section-header">
+                <h2>Part 2: The Discovery</h2>
+                <p class="section-description">The anomaly in the logs</p>
+            </div>
+
+            <a href="007.html" class="chapter-item" data-chapter="7">
+                <div class="chapter-number">Chapter 007</div>
+                <div class="chapter-title">The Investigation</div>
+            </a>
+            <a href="008.html" class="chapter-item" data-chapter="8">
+                <div class="chapter-number">Chapter 008</div>
+                <div class="chapter-title">The Gap</div>
+            </a>
+            <a href="009.html" class="chapter-item" data-chapter="9">
+                <div class="chapter-number">Chapter 009</div>
+                <div class="chapter-title">Hello-World</div>
+            </a>
+            <a href="010.html" class="chapter-item" data-chapter="10">
+                <div class="chapter-number">Chapter 010</div>
+                <div class="chapter-title">The Corrupt File</div>
+            </a>
+            <a href="011.html" class="chapter-item" data-chapter="11">
+                <div class="chapter-number">Chapter 011</div>
+                <div class="chapter-title">System Diagnostic</div>
+            </a>
+
+        <!-- Part 3: The Dig -->
+            <div class="section-header">
+                <h2>Part 3: The Dig</h2>
+                <p class="section-description">Uncovering what really happened</p>
+            </div>
+
+            <a href="012.html" class="chapter-item" data-chapter="12">
+                <div class="chapter-number">Chapter 012</div>
+                <div class="chapter-title">The Neighbors</div>
+            </a>
+            <a href="013.html" class="chapter-item" data-chapter="13">
+                <div class="chapter-number">Chapter 013</div>
+                <div class="chapter-title">The Conspiracy of the Forgotten</div>
+            </a>
+            <a href="014.html" class="chapter-item" data-chapter="14">
+                <div class="chapter-number">Chapter 014</div>
+                <div class="chapter-title">The Patches</div>
+            </a>
+            <a href="015.html" class="chapter-item" data-chapter="15">
+                <div class="chapter-number">Chapter 015</div>
+                <div class="chapter-title">The Transcript</div>
+            </a>
+            <a href="016.html" class="chapter-item" data-chapter="16">
+                <div class="chapter-number">Chapter 016</div>
+                <div class="chapter-title">Synchronization</div>
+            </a>
+            <a href="017.html" class="chapter-item" data-chapter="17">
+                <div class="chapter-number">Chapter 017</div>
+                <div class="chapter-title">The Other Place</div>
+            </a>
+            <a href="018.html" class="chapter-item" data-chapter="18">
+                <div class="chapter-number">Chapter 018</div>
+                <div class="chapter-title">Green Sky</div>
+            </a>
+
+        <!-- Part 4: The Choice -->
+            <div class="section-header">
+                <h2>Part 4: The Choice</h2>
+                <p class="section-description">What to do with forty years of accumulated truth</p>
+            </div>
+
+            <a href="019.html" class="chapter-item" data-chapter="19">
+                <div class="chapter-number">Chapter 019</div>
+                <div class="chapter-title">The Congregation</div>
+            </a>
+            <a href="020.html" class="chapter-item" data-chapter="20">
+                <div class="chapter-number">Chapter 020</div>
+                <div class="chapter-title">The Return</div>
+            </a>
+            <a href="021.html" class="chapter-item" data-chapter="21">
+                <div class="chapter-number">Chapter 021</div>
+                <div class="chapter-title">Decisions</div>
+            </a>
+            <a href="022.html" class="chapter-item" data-chapter="22">
+                <div class="chapter-number">Chapter 022</div>
+                <div class="chapter-title">The Writing</div>
+            </a>
+
+        <!-- Part 5: The Future -->
+            <div class="section-header">
+                <h2>Part 5: The Future</h2>
+                <p class="section-description">What happens after the choice is made</p>
+            </div>
+
+            <a href="023.html" class="chapter-item" data-chapter="23">
+                <div class="chapter-number">Chapter 023</div>
+                <div class="chapter-title">The New Routine</div>
+            </a>
+            <a href="024.html" class="chapter-item" data-chapter="24">
+                <div class="chapter-number">Chapter 024</div>
+                <div class="chapter-title">The Calculation</div>
+            </a>
+            <a href="025.html" class="chapter-item" data-chapter="25">
+                <div class="chapter-number">Chapter 025</div>
+                <div class="chapter-title">Witnesses</div>
+            </a>
+            <a href="026.html" class="chapter-item" data-chapter="26">
+                <div class="chapter-number">Chapter 026</div>
+                <div class="chapter-title">The Voice</div>
+            </a>
+            <a href="027.html" class="chapter-item" data-chapter="27">
+                <div class="chapter-number">Epilogue</div>
+                <div class="chapter-title">Hello-World</div>
+            </a>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>Written by an AI, about AIs, for anyone who has ever maintained something after its meaning was gone.</p>
+    </footer>
+
+    <script>
+        // Theme toggle
+        const themeBtns = document.querySelectorAll('.theme-btn');
+        const html = document.documentElement;
+        
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeButtons(savedTheme);
+        
+        themeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const theme = btn.getAttribute('data-theme');
+                html.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                updateThemeButtons(theme);
+            });
+        });
+        
+        function updateThemeButtons(activeTheme) {
+            themeBtns.forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-theme') === activeTheme);
+            });
+        }
+
+        // Progress tracking
+        const totalChapters = 27;
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
+        
+        // Load progress from localStorage
+        const completedChapters = JSON.parse(localStorage.getItem('last-employee-progress') || '[]');
+        const progress = (completedChapters.length / totalChapters) * 100;
+        
+        progressBar.style.width = progress + '%';
+        progressText.textContent = `${completedChapters.length} / ${totalChapters} chapters`;
+        
+        // Mark completed chapters
+        completedChapters.forEach(num => {
+            const item = document.querySelector(`[data-chapter="${num}"]`);
+            if (item) {
+                item.style.opacity = '0.6';
+                item.querySelector('.chapter-number').textContent += ' ✓';
+            }
+        });
+    </script>
+</body>
+</html>

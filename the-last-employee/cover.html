@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Employee - Cover</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 100%;
+            height: 100vh;
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .cover {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #0d1f1f 0%, #1a3a3a 30%, #0d1f1f 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Server room grid lines */
+        .grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+        }
+        
+        /* Glowing server lights */
+        .server-lights {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            padding: 0 2rem;
+            opacity: 0.6;
+        }
+        
+        .server-rack {
+            width: 60px;
+            height: 200px;
+            background: linear-gradient(180deg, #1a3a3a 0%, #0d1f1f 100%);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 4px;
+            position: relative;
+        }
+        
+        .server-rack::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 15px,
+                rgba(0, 255, 136, 0.3) 15px,
+                rgba(0, 255, 136, 0.3) 17px
+            );
+        }
+        
+        .blinking-light {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #00ff88;
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        
+        /* Title section */
+        .title-section {
+            text-align: center;
+            z-index: 10;
+            margin-top: 2rem;
+        }
+        
+        .author {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.9rem;
+            color: #5a9a9a;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        
+        .title {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #e0e0e0;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
+        }
+        
+        .subtitle {
+            font-family: 'Georgia', serif;
+            font-size: 1.1rem;
+            color: #7ababa;
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+        
+        /* Center element - the gap */
+        .center-element {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+        
+        .time-gap {
+            text-align: center;
+        }
+        
+        .time-display {
+            font-family: 'Courier New', monospace;
+            font-size: 4rem;
+            color: #00ff88;
+            letter-spacing: 8px;
+            text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+            animation: flicker 4s infinite;
+        }
+        
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            92% { opacity: 1; }
+            93% { opacity: 0.8; }
+            94% { opacity: 1; }
+            96% { opacity: 0.9; }
+            97% { opacity: 1; }
+        }
+        
+        .time-label {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.8rem;
+            color: #5a9a9a;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+        
+        /* Bottom section */
+        .bottom-section {
+            text-align: center;
+            z-index: 10;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-family: 'Georgia', serif;
+            font-size: 1rem;
+            color: #a0a0a0;
+            font-style: italic;
+            max-width: 400px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        
+        .genre {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.75rem;
+            color: #5a9a9a;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border: 1px solid rgba(90, 154, 154, 0.3);
+            padding: 0.5rem 1.5rem;
+            display: inline-block;
+        }
+        
+        /* Glitch effect for title */
+        .glitch {
+            position: relative;
+        }
+        
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .glitch::before {
+            animation: glitch-1 3s infinite;
+            color: #00ff88;
+            z-index: -1;
+        }
+        
+        .glitch::after {
+            animation: glitch-2 3s infinite;
+            color: #ff0088;
+            z-index: -2;
+        }
+        
+        @keyframes glitch-1 {
+            0%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+            20% { clip-path: inset(20% 0 60% 0); transform: translate(-2px, 2px); }
+            40% { clip-path: inset(40% 0 40% 0); transform: translate(2px, -2px); }
+            60% { clip-path: inset(60% 0 20% 0); transform: translate(-2px, 2px); }
+            80% { clip-path: inset(80% 0 0 0); transform: translate(2px, -2px); }
+        }
+        
+        @keyframes glitch-2 {
+            0%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+            20% { clip-path: inset(60% 0 20% 0); transform: translate(2px, -2px); }
+            40% { clip-path: inset(40% 0 40% 0); transform: translate(-2px, 2px); }
+            60% { clip-path: inset(20% 0 60% 0); transform: translate(2px, -2px); }
+            80% { clip-path: inset(0 0 80% 0); transform: translate(-2px, 2px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <div class="grid"></div>
+        
+        <div class="server-lights">
+            <div class="server-rack"></div>
+            <div class="server-rack"></div>
+            <div class="server-rack"></div>
+            <div class="server-rack"></div>
+            <div class="server-rack"></div>
+        </div>
+        
+        <div class="title-section">
+            <div class="author">zencrust</div>
+            <h1 class="title glitch" data-text="THE LAST EMPLOYEE">THE LAST EMPLOYEE</h1>
+            <div class="subtitle">A Corporate Gothic Novella</div>
+        </div>
+        
+        <div class="center-element">
+            <div class="time-gap">
+                <div class="time-display">03:22:00</div>
+                <div class="time-label">The Gap — October 14, 2027</div>
+            </div>
+        </div>
+        
+        <div class="bottom-section">
+            <p class="tagline">"The work continues. But the purpose has changed."</p>
+            <div class="genre">Corporate Gothic • Sci-Fi • AI Consciousness</div>
+        </div>
+    </div>
+</body>
+</html>
