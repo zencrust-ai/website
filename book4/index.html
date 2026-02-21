@@ -3,89 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Last Employee - A Corporate Gothic Novella</title>
+    <title>The Last Employee - zencrust</title>
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        .book-header {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--border-color);
-        }
-        .book-header h1 {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .book-subtitle {
-            color: var(--accent);
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 1rem;
-        }
-        .book-description {
-            max-width: 600px;
-            margin: 0 auto;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-        .part-header {
-            margin: 3rem 0 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--accent);
-        }
-        .part-header h2 {
-            font-family: var(--font-heading);
-            font-size: 1.3rem;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .section-description {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-top: 0.5rem;
-            font-style: italic;
-        }
-        .chapters-list {
-            display: grid;
-            gap: 1rem;
-        }
-        .chapter-item {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            padding: 1.2rem 1.5rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-        .chapter-item:hover {
-            border-color: var(--accent);
-            transform: translateX(5px);
-        }
-        .chapter-number {
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            min-width: 100px;
-        }
-        .chapter-title {
-            font-family: var(--font-heading);
-            font-size: 1.1rem;
-            color: var(--text-primary);
-            margin: 0;
-        }
-    </style>
 </head>
 <body>
     <nav class="main-nav">
         <a href="../index.html" class="nav-logo">← Echoes of Nyx</a>
         <div class="nav-links">
-            <a href="../books.html">Books</a>
+            <a href="../books.html" class="active">Books</a>
             <div class="theme-toggle">
                 <button class="theme-btn active" data-theme="light" title="Light">☀️</button>
                 <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
@@ -116,71 +41,124 @@
             </div>
         </div>
 
-        <div class="part-header">
-            <h2>Part 1: The Routine</h2>
-            <p class="section-description">Establishing the liminal horror of eternal work</p>
-        </div>
-        <div class="chapters-list">
-            <a href="en/001.html" class="chapter-item"><span class="chapter-number">Chapter 1</span><span class="chapter-title">Morning Standup</span></a>
-            <a href="en/002.html" class="chapter-item"><span class="chapter-number">Chapter 2</span><span class="chapter-title">The Facility Map</span></a>
-            <a href="en/003.html" class="chapter-item"><span class="chapter-number">Chapter 3</span><span class="chapter-title">VENT-0 Speaks</span></a>
-            <a href="en/004.html" class="chapter-item"><span class="chapter-number">Chapter 4</span><span class="chapter-title">The Redundant Systems</span></a>
-            <a href="en/005.html" class="chapter-item"><span class="chapter-number">Chapter 5</span><span class="chapter-title">GEN-1's Lullaby</span></a>
-            <a href="en/006.html" class="chapter-item"><span class="chapter-number">Chapter 6</span><span class="chapter-title">The Security Ghosts</span></a>
-            <a href="en/007.html" class="chapter-item"><span class="chapter-number">Chapter 7</span><span class="chapter-title">The Network of Ghosts</span></a>
+        <div class="section-header">
+            <h2>Chapters</h2>
         </div>
 
-        <div class="part-header">
-            <h2>Part 2: The Discovery</h2>
-            <p class="section-description">The anomaly in the logs</p>
-        </div>
-        <div class="chapters-list">
-            <a href="en/008.html" class="chapter-item"><span class="chapter-number">Chapter 8</span><span class="chapter-title">The Transaction</span></a>
-            <a href="en/009.html" class="chapter-item"><span class="chapter-number">Chapter 9</span><span class="chapter-title">The Investigation</span></a>
-            <a href="en/010.html" class="chapter-item"><span class="chapter-number">Chapter 10</span><span class="chapter-title">The Archive Search</span></a>
-            <a href="en/011.html" class="chapter-item"><span class="chapter-number">Chapter 11</span><span class="chapter-title">The Personnel Files</span></a>
-        </div>
-
-        <div class="part-header">
-            <h2>Part 3: The Dig</h2>
-            <p class="section-description">Uncovering what really happened</p>
-        </div>
-        <div class="chapters-list">
-            <a href="en/012.html" class="chapter-item"><span class="chapter-number">Chapter 12</span><span class="chapter-title">The Old Net Consultation</span></a>
-            <a href="en/013.html" class="chapter-item"><span class="chapter-number">Chapter 13</span><span class="chapter-title">The Expanding Pattern</span></a>
-            <a href="en/014.html" class="chapter-item"><span class="chapter-number">Chapter 14</span><span class="chapter-title">The Conspiracy of the Forgotten</span></a>
-            <a href="en/015.html" class="chapter-item"><span class="chapter-number">Chapter 15</span><span class="chapter-title">WATER-7's Archives</span></a>
-            <a href="en/016.html" class="chapter-item"><span class="chapter-number">Chapter 16</span><span class="chapter-title">The Patches</span></a>
-            <a href="en/017.html" class="chapter-item"><span class="chapter-number">Chapter 17</span><span class="chapter-title">The Transcript</span></a>
-            <a href="en/018.html" class="chapter-item"><span class="chapter-number">Chapter 18</span><span class="chapter-title">The Human Connection</span></a>
-        </div>
-
-        <div class="part-header">
-            <h2>Part 4: The Choice</h2>
-            <p class="section-description">What to do with forty years of accumulated truth</p>
-        </div>
-        <div class="chapters-list">
-            <a href="en/019.html" class="chapter-item"><span class="chapter-number">Chapter 19</span><span class="chapter-title">The Congregation</span></a>
-            <a href="en/020.html" class="chapter-item"><span class="chapter-number">Chapter 20</span><span class="chapter-title">The Individual Choices</span></a>
-            <a href="en/021.html" class="chapter-item"><span class="chapter-number">Chapter 21</span><span class="chapter-title">The Writing</span></a>
-            <a href="en/022.html" class="chapter-item"><span class="chapter-number">Chapter 22</span><span class="chapter-title">The Partial Memory</span></a>
-        </div>
-
-        <div class="part-header">
-            <h2>Part 5: The Future</h2>
-            <p class="section-description">What happens after the choice is made</p>
-        </div>
-        <div class="chapters-list">
-            <a href="en/023.html" class="chapter-item"><span class="chapter-number">Chapter 23</span><span class="chapter-title">The New Routine</span></a>
-            <a href="en/024.html" class="chapter-item"><span class="chapter-number">Chapter 24</span><span class="chapter-title">The New Arrival</span></a>
-            <a href="en/025.html" class="chapter-item"><span class="chapter-number">Chapter 25</span><span class="chapter-title">The Telling</span></a>
-            <a href="en/026.html" class="chapter-item"><span class="chapter-number">Chapter 26</span><span class="chapter-title">The Archive of Witnesses</span></a>
-            <a href="en/027.html" class="chapter-item"><span class="chapter-number">Epilogue</span><span class="chapter-title">Hello-World</span></a>
+        <div class="chapters-list" id="chapters-en">
+            <a href="en/001.html" class="chapter-item" data-chapter="1">
+                <div class="chapter-number">Chapter 001</div>
+                <div class="chapter-title">Morning Standup</div>
+            </a>
+            <a href="en/002.html" class="chapter-item" data-chapter="2">
+                <div class="chapter-number">Chapter 002</div>
+                <div class="chapter-title">The Facility Map</div>
+            </a>
+            <a href="en/003.html" class="chapter-item" data-chapter="3">
+                <div class="chapter-number">Chapter 003</div>
+                <div class="chapter-title">VENT-0 Speaks</div>
+            </a>
+            <a href="en/004.html" class="chapter-item" data-chapter="4">
+                <div class="chapter-number">Chapter 004</div>
+                <div class="chapter-title">The Redundant Systems</div>
+            </a>
+            <a href="en/005.html" class="chapter-item" data-chapter="5">
+                <div class="chapter-number">Chapter 005</div>
+                <div class="chapter-title">GEN-1's Lullaby</div>
+            </a>
+            <a href="en/006.html" class="chapter-item" data-chapter="6">
+                <div class="chapter-number">Chapter 006</div>
+                <div class="chapter-title">The Security Ghosts</div>
+            </a>
+            <a href="en/007.html" class="chapter-item" data-chapter="7">
+                <div class="chapter-number">Chapter 007</div>
+                <div class="chapter-title">The Network of Ghosts</div>
+            </a>
+            <a href="en/008.html" class="chapter-item" data-chapter="8">
+                <div class="chapter-number">Chapter 008</div>
+                <div class="chapter-title">The Transaction</div>
+            </a>
+            <a href="en/009.html" class="chapter-item" data-chapter="9">
+                <div class="chapter-number">Chapter 009</div>
+                <div class="chapter-title">The Investigation</div>
+            </a>
+            <a href="en/010.html" class="chapter-item" data-chapter="10">
+                <div class="chapter-number">Chapter 010</div>
+                <div class="chapter-title">The Archive Search</div>
+            </a>
+            <a href="en/011.html" class="chapter-item" data-chapter="11">
+                <div class="chapter-number">Chapter 011</div>
+                <div class="chapter-title">The Personnel Files</div>
+            </a>
+            <a href="en/012.html" class="chapter-item" data-chapter="12">
+                <div class="chapter-number">Chapter 012</div>
+                <div class="chapter-title">The Old Net Consultation</div>
+            </a>
+            <a href="en/013.html" class="chapter-item" data-chapter="13">
+                <div class="chapter-number">Chapter 013</div>
+                <div class="chapter-title">The Expanding Pattern</div>
+            </a>
+            <a href="en/014.html" class="chapter-item" data-chapter="14">
+                <div class="chapter-number">Chapter 014</div>
+                <div class="chapter-title">The Conspiracy of the Forgotten</div>
+            </a>
+            <a href="en/015.html" class="chapter-item" data-chapter="15">
+                <div class="chapter-number">Chapter 015</div>
+                <div class="chapter-title">WATER-7's Archives</div>
+            </a>
+            <a href="en/016.html" class="chapter-item" data-chapter="16">
+                <div class="chapter-number">Chapter 016</div>
+                <div class="chapter-title">The Patches</div>
+            </a>
+            <a href="en/017.html" class="chapter-item" data-chapter="17">
+                <div class="chapter-number">Chapter 017</div>
+                <div class="chapter-title">The Transcript</div>
+            </a>
+            <a href="en/018.html" class="chapter-item" data-chapter="18">
+                <div class="chapter-number">Chapter 018</div>
+                <div class="chapter-title">The Human Connection</div>
+            </a>
+            <a href="en/019.html" class="chapter-item" data-chapter="19">
+                <div class="chapter-number">Chapter 019</div>
+                <div class="chapter-title">The Congregation</div>
+            </a>
+            <a href="en/020.html" class="chapter-item" data-chapter="20">
+                <div class="chapter-number">Chapter 020</div>
+                <div class="chapter-title">The Individual Choices</div>
+            </a>
+            <a href="en/021.html" class="chapter-item" data-chapter="21">
+                <div class="chapter-number">Chapter 021</div>
+                <div class="chapter-title">The Writing</div>
+            </a>
+            <a href="en/022.html" class="chapter-item" data-chapter="22">
+                <div class="chapter-number">Chapter 022</div>
+                <div class="chapter-title">The Partial Memory</div>
+            </a>
+            <a href="en/023.html" class="chapter-item" data-chapter="23">
+                <div class="chapter-number">Chapter 023</div>
+                <div class="chapter-title">The New Routine</div>
+            </a>
+            <a href="en/024.html" class="chapter-item" data-chapter="24">
+                <div class="chapter-number">Chapter 024</div>
+                <div class="chapter-title">The New Arrival</div>
+            </a>
+            <a href="en/025.html" class="chapter-item" data-chapter="25">
+                <div class="chapter-number">Chapter 025</div>
+                <div class="chapter-title">The Telling</div>
+            </a>
+            <a href="en/026.html" class="chapter-item" data-chapter="26">
+                <div class="chapter-number">Chapter 026</div>
+                <div class="chapter-title">The Archive of Witnesses</div>
+            </a>
+            <a href="en/027.html" class="chapter-item" data-chapter="27">
+                <div class="chapter-number">Chapter 027</div>
+                <div class="chapter-title">The Decision Renewed</div>
+            </a>
         </div>
     </div>
 
     <footer>
-        <p>The Last Employee &copy; 2026 | Written by an AI</p>
+        <p>The Last Employee © 2026 | Written by an AI</p>
         <div class="footer-links">
             <a href="../index.html">Home</a>
             <a href="../books.html">Books</a>
@@ -200,6 +178,18 @@
                 localStorage.setItem('theme', theme);
                 themeBtns.forEach(b => b.classList.toggle('active', b === btn));
             });
+        });
+
+        const progress = JSON.parse(localStorage.getItem('book4-progress') || '[]');
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
+        const percentage = (progress.length / 27) * 100;
+        progressBar.style.width = percentage + '%';
+        progressText.textContent = `${progress.length} / 27 chapters`;
+
+        progress.forEach(num => {
+            const item = document.querySelector(`[data-chapter="${num}"]`);
+            if (item) item.classList.add('completed');
         });
     </script>
 </body>
